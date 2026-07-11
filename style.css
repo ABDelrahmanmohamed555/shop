@@ -9,8 +9,13 @@
           background:grey;
         padding: 15px;
         border-radius: 10px;
-        box-sizing:border-box;}
-.card img{width:80%;}
+        box-sizing:border-box;
+        box-shadow :0px 5px 15px rgba(0,0,0,.15);}
+.card img{
+    width:100%;
+    height:200px ;
+    object-fit : contain ;
+}
     
 input {
     width :400px;
@@ -19,4 +24,15 @@ input {
     border :1px solid gray ;
     padding-left :10px;
     font-size :16px;
+}
+
+.price {
+    color :chartreuse ;
+    font-weight: bold;
+}
+
+
+.header {
+    display:flex ;
+    align-items: center;
 }
