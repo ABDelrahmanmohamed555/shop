@@ -42,8 +42,33 @@ input {
 body{
     background: linear-gradient(
         135deg,
-        #3277bb,
-        #8e338d,
-        #8c4681
+        #d92727,
+        #8cc235,
+        #239cd4
     );
+    background-size: 400% 400% ;
+    animation :gradientMove 25s ease infinite ;
+}
+
+
+
+
+
+
+
+
+
+@keyframes gradientMove  {
+0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
 }
