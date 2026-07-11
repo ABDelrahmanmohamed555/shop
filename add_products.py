@@ -23,7 +23,7 @@ card = f"""
 <div class = "card">
 <img src = "{image}" >
 <h2>{name}</h2>
-<p class = "price">price : {price} EGP </p> 
+<p style = "color : chartreuse" :>price : {price} EGP </p> 
 </div>
 
 <!--add_here-->
