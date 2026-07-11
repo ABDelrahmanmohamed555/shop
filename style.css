@@ -36,3 +36,14 @@ input {
     display:flex ;
     align-items: center;
 }
+
+
+
+body{
+    background: linear-gradient(
+        135deg,
+        #3277bb,
+        #8e338d,
+        #8c4681
+    );
+}
