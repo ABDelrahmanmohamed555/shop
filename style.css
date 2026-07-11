@@ -40,22 +40,429 @@ input {
 
 
 body{
-    background: linear-gradient(
-        135deg,
-        #d92727,
-        #8cc235,
-        #239cd4
+
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+    -45deg,
+
+    #07090d,
+    #111827,
+    #1d2533,
+    #0f1724,
+    #050608,
+    #1a1a1a,
+    #07090d
+
     );
-    background-size: 400% 400% ;
-    animation :gradientMove 25s ease infinite ;
+
+    background-size:600% 600%;
+
+    animation:gradientBG 20s ease infinite;
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:-20%;
+
+    z-index:-2;
+
+    filter:blur(130px);
+
+    opacity:.35;
+
+    background:
+
+    radial-gradient(circle,#00e5ff 0%,transparent 35%),
+
+    radial-gradient(circle,#ffb300 0%,transparent 35%),
+
+    radial-gradient(circle,#8a2be2 0%,transparent 35%),
+
+    radial-gradient(circle,#ff004c 0%,transparent 30%);
+
+    animation:aurora 18s ease-in-out infinite alternate;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:.045;
+
+    background-image:
+
+    linear-gradient(30deg,#ffffff22 2px,transparent 2px),
+
+    linear-gradient(150deg,#ffffff22 2px,transparent 2px),
+
+    linear-gradient(90deg,#ffffff18 1px,transparent 1px);
+
+    background-size:55px 32px;
+
+    z-index:-1;
+
+}
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:rgba(15,18,24,.65);
+
+    backdrop-filter:blur(20px);
+
+    transform:translateX(-100%);
+
+    transition:transform .45s cubic-bezier(.22,.61,.36,1);
+
+    z-index:1000;
+
+}
+
+.sidebar.active{
+
+    transform:translateX(0);
+
+}
+
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:900;
+
+}
+
+
+
+.overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#menuBtn {
+
+    position:fixed;
+
+    top:25px;
+
+    left:20px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:28px;
+
+    background:rgba(15,18,24,.45);
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+    z-index:2000;
+
+}
+
+#menuBtn:hover{
+
+    transform:scale(1.08);
+
+    background:rgba(30,35,45,.7);
+
+}
+
+
+#menuBtn::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:3px;
+
+    border-radius:50%;
+
+    background:#10151d;
+
+    z-index:-1;
+
+}
+
+
+#menuBtn.open{
+
+    transform:rotate(90deg);
+
+}
+
+.background-logo{
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 450px;
+    height: 450px;
+
+    z-index: -1;
+
+    opacity: .08;
+
+    animation: floating 8s ease-in-out infinite;
+}
+
+.logo-frame{
+    animation:
+        rgbBorder 6s linear infinite,
+        frameRotate 8s linear infinite;
+}
+
+.logo-frame img{
+
+    animation:counterRotate 8s linear infinite reverse;
+
+}
+
+
+.logo-header{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:25px;
+    margin-bottom:40px;
+}
+
+.logo-frame{
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+
+45deg,
+
+#47d576,
+#00b0ff,
+#0ed7e6,
+#3666eb,
+#0b8ba1,
+#127ca2,
+#8a2be2,
+#00e5ff
+
+);
+
+background-size:600%;
+
+animation:
+
+rgbMove 4s linear infinite,
+frameRotate 8s linear infinite;
+
+    background-size:400%;
+
+    animation:
+        rgbBorder 6s linear infinite,
+        logoRotate 10s linear infinite;
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,.5),
+        0 0 35px rgba(255,0,255,.4);
+}
+
+.logo-frame img{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#111;
+}
+
+
+
+.whatsapp-btn{
+    position: fixed;
+
+    top: 18px;
+    left: 95px;   /* عدلها حسب مكان الـ Sidebar */
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 28px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #111;
+
+    background: linear-gradient(
+        120deg,
+        #7568ff,
+        #c58cff,
+        #ffb36b,
+        #ffe16f,
+        #7568ff
+    );
+
+    background-size: 350% 350%;
+
+    animation: gradientMove 12s ease infinite;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
+
+    transition: .35s;
+
+    z-index: 9999;
 }
 
 
 
 
 
+.whatsapp-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.25);
+
+}
 
 
+.whatsapp-btn i{
+
+    font-size:20px;
+
+    animation:iconFloat 2.5s ease-in-out infinite;
+
+}
+
+/* دوران اللوجو */
+
+/* @keyframes logoRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+} */
+
+/* حركة RGB */
+
+@keyframes rgbBorder{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+
+
+@keyframes floating{
+
+    0%{
+        transform:translate(-50%,-50%) translateY(0px);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) translateY(-20px);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) translateY(0px);
+    }
+
+}
 
 
 @keyframes gradientMove  {
@@ -72,3 +479,137 @@ body{
     }
 
 }
+
+
+@keyframes frameRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* @keyframes counterRotate{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    } */
+
+/* @keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+} */
+
+
+@keyframes gradientBG{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+
+@keyframes aurora{
+
+    0%{
+
+        transform:
+        translate(-8%,-8%)
+        rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+        translate(8%,5%)
+        rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-5%,10%)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+@keyframes rgbMove{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:600%;
+
+}
+
+}
+
+
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+@keyframes iconFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-2px);
+    }
+
+}
+
