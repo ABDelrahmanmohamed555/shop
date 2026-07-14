@@ -40,6 +40,13 @@ const allCategories = [
     air_conditioner ,
     fans ,
     items ,
+    vacuum ,
+    mixer ,
+    ketel ,
+    dispenser ,
+    heaters ,
+    iron ,
+    microwave ,
 ];
 
 
