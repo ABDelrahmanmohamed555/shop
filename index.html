@@ -9,6 +9,8 @@
         <h3 style = "text-align :center"> made by: unknown</h3>
         <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
     </head>
 
     <body>
@@ -33,23 +35,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </div>
 
 </header>
-        <div class = "sidebar">
-            <h2>التصنيفات</h2>
-            <button>ثلاجة</button>
-            <button>غسالة</button>
-            <button>تكييف</button>
-            <button>الكترونيات</button>
-            <button>عدة</button>
-            <button>مراوح</button>
-            <button>مبردات مياه</button>
-            <button>سخانات</button>
-
-
-        </div>
-
- <button id="menuBtn">
+<button id="menuBtn">
     ☰
  </button>
+ <div class="overlay"></div>
+
+
+        <div class="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-kicker">H.S REPAIR CENTER</span>
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i> التصنيفات</h2>
+        <div class="sidebar-underline"></div>
+    </div>
+    <div id="categorylist"></div>
+</div>
+<div class="overlay"></div>
+
+
+ 
+ 
                
 
         
@@ -101,6 +105,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 
 </div>
+<script src="data/refrigerators.js"></script>
 <script src="botton.js"></script>
 
     </body>
