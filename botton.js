@@ -37,10 +37,40 @@ function closeSidebarAndScrollToProducts() {
 const allCategories = [
     refrigerators,
     washing_machine,
-    
-    // airConditioners,
+    air_conditioner ,
+    fans ,
+    items ,
 ];
 
+
+// ============ زر عرض كل المنتجات ============
+const allProductsBtn = document.createElement("div");
+allProductsBtn.className = "cat-item";
+
+const allHeader = document.createElement("div");
+allHeader.className = "cat-header";
+
+const allNameBtn = document.createElement("button");
+allNameBtn.className = "cat-name-btn";
+allNameBtn.innerHTML = `<i class="fa-solid fa-grid-2" style="margin-left:8px;"></i> كل المنتجات`;
+allNameBtn.onclick = () => {
+    // إلغاء التحديد من أي زر نشط
+    document.querySelectorAll(".cat-name-btn.active, .sec-btn.active")
+        .forEach(b => b.classList.remove("active"));
+    
+    // تفعيل زر "كل المنتجات"
+    allNameBtn.classList.add("active");
+    
+    // عرض كل المنتجات
+    renderProducts(getAllProducts(allCategories), "");
+    closeSidebarAndScrollToProducts();
+};
+
+allHeader.appendChild(allNameBtn);
+allProductsBtn.appendChild(allHeader);
+categorylist.appendChild(allProductsBtn);
+
+// ============ بقية الكود (allCategories.forEach) ============
 /* ---------- تجميع المنتجات ---------- */
 
 function getCategoryProducts(category) {
@@ -88,6 +118,8 @@ function setActiveButton(btn) {
         .forEach(b => b.classList.remove("active"));
     if (btn) btn.classList.add("active");
 }
+
+
 
 /* ---------- بناء الأكورديون: تصنيف (اسم + سهم منفصلين) -> أقسام ---------- */
 
