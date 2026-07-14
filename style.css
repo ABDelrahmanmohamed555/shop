@@ -35,6 +35,7 @@ input {
 .header {
     display:flex ;
     align-items: center;
+    justify-content :center ;
 }
 
 
@@ -147,6 +148,84 @@ body::after{
 
     z-index:1000;
 
+    /* ============ تصغير حجم السهم في التصنيفات ============ */
+
+/* السهم الرئيسي في التصنيف */
+.cat-arrow-btn {
+    width: 32px !important;    /* تصغير عرض الزر */
+    height: 32px !important;   /* تصغير ارتفاع الزر */
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 8px !important;
+    background: rgba(255,255,255,.05);
+    color: #9aa5ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s;
+    padding: 0 !important;
+    margin: 0 4px !important;
+    flex-shrink: 0;
+}
+
+.cat-arrow-btn:hover {
+    background: rgba(255,255,255,.12);
+}
+
+/* الأيقونة نفسها */
+.cat-arrow-btn .arrow {
+    font-size: 11px !important;   /* تصغير حجم الأيقونة */
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+/* السهم في القسم (المستوى التاني) */
+.sec-arrow {
+    font-size: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+    color: #9aa5ff;
+    transition: transform .25s;
+    flex-shrink: 0;
+    margin-right: 4px;
+}
+
+/* اسم التصنيف ياخد المساحة المتبقية */
+.cat-name-btn {
+    flex: 1;
+    height: 44px;  /* تصغير الارتفاع شوية */
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,.05);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* تصغير المسافات بين العناصر */
+.cat-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;  /* تقليل المسافة بين الاسم والسهم */
+}
+
+/* تصغير المسافات العامة في الـ sidebar */
+#categorylist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 16px;
+}
 }
 
 .sidebar.active{
@@ -821,4 +900,213 @@ background-position:600%;
 
 #menuBtn.open{
     z-index: 900; /* أقل من .sidebar (1000) */
+}
+
+
+
+/* ============ تحديثات بعد شيل مستوى المنتجات من السايدبار ============ */
+
+/* القسم بقى بيمثل رابط فلترة مباشر، شكله أبسط من زرار أكورديون */
+.sec-btn{
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,.03);
+    color: #dcdcdc;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+}
+.sec-btn:hover{
+    background: rgba(0,229,255,.08);
+    color: white;
+}
+
+/* السهم بجانب القسم بيتحرك شوية لما تعمل hover، إحساس إنه هيودّيك مكان تاني */
+.sec-arrow{
+    font-size: 13px;
+    color: #9aa5ff;
+    transition: transform .25s;
+}
+.sec-btn:hover .sec-arrow{
+    transform: translateX(-4px);
+}
+
+/* القسم اللي متفلتر عليه دلوقتي */
+.sec-btn.active{
+    background: linear-gradient(120deg, rgba(117,104,255,.25), rgba(255,179,107,.18));
+    color: #fff;
+    border: 1px solid rgba(255,179,107,.4);
+}
+.sec-btn.active .sec-arrow{
+    color: #ffb36b;
+}
+
+/* عنوان صغير فوق شبكة المنتجات بيوضح انت بتشوف فلتر مين دلوقتي */
+#filter-title{
+    display: none;
+    text-align: center;
+    font-size: 15px;
+    color: #b8bcc8;
+    padding: 14px 20px 0;
+    letter-spacing: .5px;
+}
+
+
+
+/* ============ تصنيف: اسم + سهم منفصلين ============ */
+/* لو عندك قاعدة .cat-btn قديمة من قبل، امسحها أو خليها متضاربة مش هتتستخدم دلوقتي */
+
+.cat-header{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* اسم التصنيف - بياخد كل المساحة المتاحة ودايمًا قابل للدوس عليه للفلترة */
+.cat-name-btn{
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,.05);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+}
+.cat-name-btn:hover{ background: rgba(255,255,255,.09); }
+
+.cat-name-btn.active{
+    background: linear-gradient(120deg, rgba(117,104,255,.3), rgba(255,179,107,.2));
+    color: #fff;
+}
+
+/* زرار السهم - منفصل تمامًا، وظيفته الوحيدة فتح/قفل الأقسام */
+.cat-arrow-btn{
+    width: 44px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,.05);
+    color: #9aa5ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s;
+}
+.cat-arrow-btn:hover{ background: rgba(255,255,255,.09); }
+
+.arrow{
+    font-size: 13px;
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+}
+.cat-item.open > .cat-header .cat-arrow-btn .arrow{
+    transform: rotate(180deg);
+}
+
+/* حاوية الأقسام - مقفولة بالـ default، بتتفتح بس لما تدوس على السهم */
+.sections-wrap{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.cat-item.open > .sections-wrap{
+    max-height: 600px;
+    margin-top: 6px;
+}
+
+/* زرار القسم */
+.sec-btn{
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,.03);
+    color: #dcdcdc;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+}
+.sec-btn:hover{ background: rgba(0,229,255,.08); color: white; }
+
+.sec-arrow{
+    font-size: 13px;
+    color: #9aa5ff;
+    transition: transform .25s;
+}
+.sec-btn:hover .sec-arrow{ transform: translateX(-4px); }
+
+.sec-btn.active{
+    background: linear-gradient(120deg, rgba(117,104,255,.25), rgba(255,179,107,.18));
+    color: #fff;
+    border: 1px solid rgba(255,179,107,.4);
+}
+.sec-btn.active .sec-arrow{ color: #ffb36b; }
+
+/* عنوان الفلتر فوق شبكة المنتجات */
+#filter-title{
+    display: none;
+    text-align: center;
+    font-size: 15px;
+    color: #b8bcc8;
+    padding: 14px 20px 0;
+    letter-spacing: .5px;
+}
+
+.empty-note{
+    text-align: center;
+    color: #6d7280;
+    font-size: 13px;
+}
+
+
+
+/* ============ إصلاح: منع أي عنصر من الطلوع برا حدود الـ sidebar ============ */
+
+.sidebar{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* تثبيت حجم أي سهم/أيقونة جوه أزرار الأقسام والتصنيفات بشكل قاطع */
+.sec-arrow,
+.arrow{
+    font-size: 13px !important;
+    width: 14px !important;
+    height: 14px !important;
+    line-height: 14px !important;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* منع أي محتوى داخل زرار القسم يكبر أو يطلع بره حدوده */
+.sec-btn{
+    overflow: hidden;
+}
+
+/* إلغاء تأثير القاعدة القديمة #categorylist button على حجم الخط
+   (كانت مكتوبة "18 px" بمسافة، وده خطأ كتابي بيخلي الخاصية تتجاهل بالكامل) */
+#categorylist button{
+    font-size: 14px;
 }
