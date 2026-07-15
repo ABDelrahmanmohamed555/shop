@@ -90,6 +90,7 @@ body::after {
 /* ====== SIDEBAR ====== */
 /* ======================================== */
 
+/* ====== SIDEBAR ====== */
 .sidebar {
     position: fixed;
     top: 0;
@@ -101,9 +102,34 @@ body::after {
     transform: translateX(-100%);
     transition: transform .45s cubic-bezier(.22, .61, .36, 1);
     z-index: 1000;
-    padding-top: 110px;
+    padding-top: 100px;
+    padding-bottom: 20px;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
+    
+    /* إخفاء شريط التمرير */
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* Internet Explorer */
+}
+
+/* إخفاء شريط التمرير في Chrome, Safari, Edge */
+.sidebar::-webkit-scrollbar {
+    display: none;                   /* إخفاء تماماً */
+}
+
+/* أو استخدم width: 0 */
+.sidebar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    display: none;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    display: none;
 }
 
 .sidebar.active {
@@ -228,7 +254,8 @@ body::after {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    padding: 12px 16px;
+    padding: 12px 16px 40px;
+    min-height: 100%; 
 }
 
 #categorylist button {
@@ -593,6 +620,7 @@ body::after {
         gap: 12px;
         padding: 12px;
     }
+    
     
     .card { padding: 12px; max-width: 100%; margin: 0 auto; }
     .card img { height: 150px; }
