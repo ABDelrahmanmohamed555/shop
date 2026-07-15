@@ -34,7 +34,65 @@ const refrigerators = {
             name: "تايمر",
 
             products: []
-        }
+        },
+
+        {
+            name : "مروحة تبريد" ,
+            products :[]
+        },
+        {
+            name : "شبك (سربنتينة)" ,
+            products :[]
+        },
+        {
+            name : "فريون" ,
+            products : []
+        },
+        {
+            name : "فلتر" ,
+            products : []
+        },
+        {
+            name : "بلف شحن" ,
+            products : []
+        },
+        {
+            name : "مجموعة relay + overlot" ,
+            products : []
+        },
+        {
+            name : "رف ثلاجة" ,
+            products : []
+        },
+        {
+            name : "مكثف تقويم" ,
+            products : []
+        },
+        {
+            name : "لوحة تحكم (كارتة)" ,
+            products : []
+        },
+        {
+            name : "حساسات" ,
+            products : []
+        },
+        {
+            name : "ثيرمو ديسك" ,
+            products : []
+        },
+        {
+            name : "اكسسوار" ,
+            products : []
+        },
+
+
+
+
+
+
+
+
+
 
     ]
 };
