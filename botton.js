@@ -186,3 +186,5 @@ allCategories.forEach(category => {
 
 /* ---------- عرض كل المنتجات افتراضيًا أول ما الصفحة تفتح ---------- */
 renderProducts(getAllProducts(allCategories), null);
+
+

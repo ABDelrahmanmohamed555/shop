@@ -1,205 +1,256 @@
+/* ======================================== */
+/* ====== BASE STYLES ====== */
+/* ======================================== */
 
-    #products{
-        display : grid ; 
-        grid-template-columns : repeat(auto-fit, minmax(250px, 1fr)) ;
-        gap : 20px ;
-        padding : 20px;
-    }
-    .card{width:100%; 
-          background:grey;
-        padding: 15px;
-        border-radius: 10px;
-        box-sizing:border-box;
-        box-shadow :0px 5px 15px rgba(0,0,0,.15);}
-.card img{
-    width:100%;
-    height:200px ;
-    object-fit : contain ;
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
-    
+
+.card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
 input {
-    width :400px;
-    height : 40px ;
-    border-radius:10px ;
-    border :1px solid gray ;
-    padding-left :10px;
-    font-size :16px;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 .price {
-    color :chartreuse ;
+    color: chartreuse;
     font-weight: bold;
 }
 
-
 .header {
-    display:flex ;
-    align-items: center;
-    justify-content :center ;
-}
-
-
-
-body{
-
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-
-    font-family:Arial,sans-serif;
-
-    background:
-    linear-gradient(
-    -45deg,
-
-    #07090d,
-    #111827,
-    #1d2533,
-    #0f1724,
-    #050608,
-    #1a1a1a,
-    #07090d
-
-    );
-
-    background-size:600% 600%;
-
-    animation:gradientBG 20s ease infinite;
-
-    color:white;
-
-    min-height:100vh;
-
-}
-
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:-20%;
-
-    z-index:-2;
-
-    filter:blur(130px);
-
-    opacity:.35;
-
-    background:
-
-    radial-gradient(circle,#00e5ff 0%,transparent 35%),
-
-    radial-gradient(circle,#ffb300 0%,transparent 35%),
-
-    radial-gradient(circle,#8a2be2 0%,transparent 35%),
-
-    radial-gradient(circle,#ff004c 0%,transparent 30%);
-
-    animation:aurora 18s ease-in-out infinite alternate;
-
-}
-
-
-body::after{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    opacity:.045;
-
-    background-image:
-
-    linear-gradient(30deg,#ffffff22 2px,transparent 2px),
-
-    linear-gradient(150deg,#ffffff22 2px,transparent 2px),
-
-    linear-gradient(90deg,#ffffff18 1px,transparent 1px);
-
-    background-size:55px 32px;
-
-    z-index:-1;
-
-}
-
-.sidebar{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:280px;
-
-    height:100vh;
-
-    background:rgba(15,18,24,.65);
-
-    backdrop-filter:blur(20px);
-
-    transform:translateX(-100%);
-
-    transition:transform .45s cubic-bezier(.22,.61,.36,1);
-
-    z-index:1000;
-
-    /* ============ تصغير حجم السهم في التصنيفات ============ */
-
-/* السهم الرئيسي في التصنيف */
-.cat-arrow-btn {
-    width: 32px !important;    /* تصغير عرض الزر */
-    height: 32px !important;   /* تصغير ارتفاع الزر */
-    min-width: 32px !important;
-    min-height: 32px !important;
-    border-radius: 8px !important;
-    background: rgba(255,255,255,.05);
-    color: #9aa5ff;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background .25s;
-    padding: 0 !important;
-    margin: 0 4px !important;
-    flex-shrink: 0;
 }
 
-.cat-arrow-btn:hover {
-    background: rgba(255,255,255,.12);
+/* ======================================== */
+/* ====== BODY BACKGROUND ====== */
+/* ======================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #07090d, #111827, #1d2533, #0f1724, #050608, #1a1a1a, #07090d);
+    background-size: 600% 600%;
+    animation: gradientBG 20s ease infinite;
+    color: white;
+    min-height: 100vh;
 }
 
-/* الأيقونة نفسها */
-.cat-arrow-btn .arrow {
-    font-size: 11px !important;   /* تصغير حجم الأيقونة */
-    width: auto !important;
-    height: auto !important;
-    line-height: 1 !important;
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: -2;
+    filter: blur(130px);
+    opacity: .35;
+    background: radial-gradient(circle, #00e5ff 0%, transparent 35%),
+                radial-gradient(circle, #ffb300 0%, transparent 35%),
+                radial-gradient(circle, #8a2be2 0%, transparent 35%),
+                radial-gradient(circle, #ff004c 0%, transparent 30%);
+    animation: aurora 18s ease-in-out infinite alternate;
 }
 
-/* السهم في القسم (المستوى التاني) */
-.sec-arrow {
-    font-size: 12px !important;
-    width: auto !important;
-    height: auto !important;
-    line-height: 1 !important;
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    opacity: .045;
+    background-image: linear-gradient(30deg, #ffffff22 2px, transparent 2px),
+                      linear-gradient(150deg, #ffffff22 2px, transparent 2px),
+                      linear-gradient(90deg, #ffffff18 1px, transparent 1px);
+    background-size: 55px 32px;
+    z-index: -1;
+}
+
+/* ======================================== */
+/* ====== SIDEBAR ====== */
+/* ======================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: rgba(15, 18, 24, 0.95);
+    backdrop-filter: blur(20px);
+    transform: translateX(-100%);
+    transition: transform .45s cubic-bezier(.22, .61, .36, 1);
+    z-index: 1000;
+    padding-top: 110px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* ======================================== */
+/* ====== OVERLAY ====== */
+/* ======================================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    z-index: 900;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ======================================== */
+/* ====== MENU BUTTON ====== */
+/* ======================================== */
+
+#menuBtn {
+    position: fixed;
+    top: 25px;
+    left: 20px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    background: rgba(15, 18, 24, .45);
+    backdrop-filter: blur(15px);
+    transition: .35s;
+    z-index: 2000;
+}
+
+#menuBtn:hover {
+    transform: scale(1.08);
+    background: rgba(30, 35, 45, .7);
+}
+
+#menuBtn::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: #10151d;
+    z-index: -1;
+}
+
+#menuBtn.open {
+    transform: rotate(90deg);
+}
+
+/* ======================================== */
+/* ====== SIDEBAR HEADER ====== */
+/* ======================================== */
+
+.sidebar-header {
+    padding: 0 24px 22px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.sidebar-kicker {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
     color: #9aa5ff;
-    transition: transform .25s;
-    flex-shrink: 0;
-    margin-right: 4px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: .8;
 }
 
-/* اسم التصنيف ياخد المساحة المتبقية */
+.sidebar h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 12px;
+    background: linear-gradient(120deg, #7568ff, #c58cff, #ffb36b, #ffe16f, #7568ff);
+    background-size: 350% 350%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientMove 12s ease infinite;
+}
+
+.sidebar h2 i {
+    -webkit-text-fill-color: initial;
+    color: #ffb36b;
+    font-size: 19px;
+}
+
+.sidebar-underline {
+    height: 3px;
+    width: 46px;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #7568ff, #c58cff, #ffb36b, #ffe16f, #7568ff);
+    background-size: 350% 350%;
+    animation: gradientMove 8s ease infinite;
+}
+
+/* ======================================== */
+/* ====== CATEGORY LIST ====== */
+/* ======================================== */
+
+#categorylist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 16px;
+}
+
+#categorylist button {
+    font-size: 14px;
+}
+
+/* ======================================== */
+/* ====== CATEGORY ITEMS ====== */
+/* ======================================== */
+
+.cat-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 .cat-name-btn {
     flex: 1;
-    height: 44px;  /* تصغير الارتفاع شوية */
+    height: 44px;
     border: none;
     border-radius: 10px;
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -212,811 +263,59 @@ body::after{
     text-overflow: ellipsis;
 }
 
-/* تصغير المسافات بين العناصر */
-.cat-header {
-    display: flex;
-    align-items: center;
-    gap: 6px;  /* تقليل المسافة بين الاسم والسهم */
+.cat-name-btn:hover {
+    background: rgba(255, 255, 255, .09);
 }
 
-/* تصغير المسافات العامة في الـ sidebar */
-#categorylist {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 12px 16px;
-}
-}
-
-.sidebar.active{
-
-    transform:translateX(0);
-
-}
-
-
-.overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.45);
-
-    backdrop-filter:blur(4px);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.4s;
-
-    z-index:900;
-
-}
-
-
-
-.overlay.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-#menuBtn {
-
-    position:fixed;
-
-    top:25px;
-
-    left:20px;
-
-    width:70px;
-
-    height:70px;
-
-    border:none;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    color:white;
-
-    font-size:28px;
-
-    background:rgba(15,18,24,.45);
-
-    backdrop-filter:blur(15px);
-
-    transition:.35s;
-
-    z-index:2000;
-
-}
-
-#menuBtn:hover{
-
-    transform:scale(1.08);
-
-    background:rgba(30,35,45,.7);
-
-}
-
-
-#menuBtn::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:3px;
-
-    border-radius:50%;
-
-    background:#10151d;
-
-    z-index:-1;
-
-}
-
-
-#menuBtn.open{
-
-    transform:rotate(90deg);
-
-}
-
-.background-logo{
-    position: fixed;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 450px;
-    height: 450px;
-
-    z-index: -1;
-
-    opacity: .08;
-
-    animation: floating 8s ease-in-out infinite;
-}
-
-.logo-frame{
-    animation:
-        rgbBorder 6s linear infinite,
-        frameRotate 8s linear infinite;
-}
-
-.logo-frame img{
-
-    animation:counterRotate 8s linear infinite reverse;
-
-}
-
-
-.logo-header{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-top:25px;
-    margin-bottom:40px;
-}
-
-.logo-frame{
-
-    width:160px;
-    height:160px;
-
-    border-radius:50%;
-
-    padding:6px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:linear-gradient(
-
-45deg,
-
-#FFD700,
-silver,
-#454747,
-#E0E0E0,
-#D4AF37,
-#808080,
-#e2dc5b,
-#a2964c
-
-);
-
-background-size:600%;
-
-animation:
-
-rgbMove 4s linear infinite,
-frameRotate 8s linear infinite;
-
-    background-size:400%;
-
-    animation:
-        rgbBorder 6s linear infinite,
-        logoRotate 10s linear infinite;
-
-    box-shadow:
-        0 0 20px rgba(0,255,255,.5),
-        0 0 35px rgba(255,0,255,.4);
-}
-
-.logo-frame img{
-
-    width:100%;
-    height:100%;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    background:#111;
-}
-
-
-
-.whatsapp-btn{
-    position: fixed;
-
-    top: 18px;
-    left: 95px;   /* عدلها حسب مكان الـ Sidebar */
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 14px 28px;
-
-    border-radius: 40px;
-
-    text-decoration: none;
-
-    font-size: 18px;
-    font-weight: 700;
-
-    color: #111;
-
-    background: linear-gradient(
-        120deg,
-        #7568ff,
-        #c58cff,
-        #ffb36b,
-        #ffe16f,
-        #7568ff
-    );
-
-    background-size: 350% 350%;
-
-    animation: gradientMove 12s ease infinite;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.18);
-
-    transition: .35s;
-
-    z-index: 500;
-}
-
-
-
-
-
-.whatsapp-btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.25);
-
-}
-
-
-.whatsapp-btn i{
-
-    font-size:20px;
-
-    animation:iconFloat 2.5s ease-in-out infinite;
-
-}
-
-/* دوران اللوجو */
-
-/* @keyframes logoRotate{
-
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
-
-} */
-
-/* حركة RGB */
-
-
-ش/* ============ SIDEBAR HEADER FIX + DECORATION ============ */
-
-.sidebar{
-    /* مسافة كافية فوق عشان الزرار الدائري (70px + 25px من فوق) يعدّي من غير تصادم */
-    padding-top: 110px;
-}
-
-.sidebar-header{
-    padding: 0 24px 22px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-/* كلمة صغيرة إنجليزية فوق العنوان - لمسة احترافية زي شركات التقنية */
-.sidebar-kicker{
-    display: block;
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: #9aa5ff;
-    margin-bottom: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: .8;
-}
-
-.sidebar h2{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 22px;
-    font-weight: 800;
-    margin: 0 0 12px;
-
-    background: linear-gradient(120deg, #7568ff, #c58cff, #ffb36b, #ffe16f, #7568ff);
-    background-size: 350% 350%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: gradientMove 12s ease infinite; /* بتستخدم keyframes موجودة أصلاً عندك */
-}
-
-.sidebar h2 i{
-    -webkit-text-fill-color: initial;
-    color: #ffb36b;
-    font-size: 19px;
-}
-
-/* خط سفلي رفيع متحرك بنفس ألوان الهوية */
-.sidebar-underline{
-    height: 3px;
-    width: 46px;
-    border-radius: 10px;
-    background: linear-gradient(120deg, #7568ff, #c58cff, #ffb36b, #ffe16f, #7568ff);
-    background-size: 350% 350%;
-    animation: gradientMove 8s ease infinite;
-}
-
-
-#categorylist {
-    display:  flex ;
-    flex-direction:column ;
-    gap : 12px ;
-    padding :20px ;
-
-}
-
-
-
-#categorylist button {
-    width : 100% ;
-    height : 55px ;
-    border : none ;
-    border-radius: 15 px;
-    background : rgba (255,255,255,.05) ;
-    color : white ;
-    font-size :18 px ;
-    text-align : right ;
-    padding-right :20px;
-}
-
-@keyframes rgbBorder{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-}
-
-
-
-@keyframes floating{
-
-    0%{
-        transform:translate(-50%,-50%) translateY(0px);
-    }
-
-    50%{
-        transform:translate(-50%,-50%) translateY(-20px);
-    }
-
-    100%{
-        transform:translate(-50%,-50%) translateY(0px);
-    }
-
-}
-
-
-@keyframes gradientMove  {
-0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-}
-
-
-@keyframes frameRotate{
-
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
-
-}
-
-/* @keyframes counterRotate{
-
-    from{
-        transform:rotate(360deg);
-    }
-
-    to{
-        transform:rotate(0deg);
-    } */
-
-/* @keyframes bgMove{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-} */
-
-
-@keyframes gradientBG{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-}
-
-
-@keyframes aurora{
-
-    0%{
-
-        transform:
-        translate(-8%,-8%)
-        rotate(0deg);
-
-    }
-
-    50%{
-
-        transform:
-        translate(8%,5%)
-        rotate(180deg);
-
-    }
-
-    100%{
-
-        transform:
-        translate(-5%,10%)
-        rotate(360deg);
-
-    }
-
-}
-
-
-
-@keyframes rgbMove{
-
-0%{
-
-background-position:0%;
-
-}
-
-100%{
-
-background-position:600%;
-
-}
-
-}
-
-
-
-@keyframes gradientMove{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-}
-
-@keyframes iconFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-2px);
-    }
-
-}
-
-
-
-
-
-
-/* ============ SIDEBAR ACCORDION (تصنيف -> قسم -> منتج) ============ */
-
-#categorylist {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 20px;
-}
-
-/* زر التصنيف الرئيسي */
-.cat-btn {
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-radius: 12px;
-    background: rgba(255,255,255,.05);
-    color: white;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    cursor: pointer;
-    transition: background .25s;
-}
-.cat-btn:hover{ background: rgba(255,255,255,.09); }
-
-/* السهم بتاع أي مستوى */
-.arrow{
-    font-size: 13px;
-    transition: transform .35s cubic-bezier(.22,.61,.36,1);
-    color: #9aa5ff;
-}
-
-/* لما التصنيف يتفتح، السهم بيتقلب */
-.cat-item.open > .cat-btn .arrow{ transform: rotate(180deg); }
-.sec-item.open > .sec-btn .arrow{ transform: rotate(180deg); }
-
-/* حاوية الأقسام جوه كل تصنيف - مقفولة بالـ default */
-.sections-wrap{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .4s ease;
-    padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-.cat-item.open > .sections-wrap{
-    max-height: 800px; /* رقم كبير كفاية يسع كل الأقسام والمنتجات */
-    margin-top: 6px;
-}
-
-/* زر القسم (المستوى التاني) */
-.sec-btn{
-    width: 100%;
-    height: 42px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255,255,255,.03);
-    color: #dcdcdc;
-    font-size: 14.5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 14px;
-    cursor: pointer;
-    transition: background .25s;
-}
-.sec-btn:hover{ background: rgba(255,255,255,.07); }
-
-/* حاوية المنتجات جوه كل قسم */
-.products-wrap{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding-right: 10px;
-}
-.sec-item.open > .products-wrap{
-    max-height: 500px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-/* زر المنتج (المستوى التالت) */
-.prod-btn{
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255,255,255,.02);
-    color: #b8bcc8;
-    font-size: 13.5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 9px 12px;
-    cursor: pointer;
-    transition: background .2s, color .2s;
-    text-align: right;
-}
-.prod-btn:hover{
-    background: rgba(0,229,255,.08);
-    color: white;
-}
-.prod-btn .prod-price{
-    color: chartreuse;
-    font-weight: bold;
-    font-size: 12.5px;
-}
-
-.empty-note{
-    font-size: 12.5px;
-    color: #6d7280;
-    padding: 6px 12px;
-}
-
-
-#menuBtn.open{
-    z-index: 900; /* أقل من .sidebar (1000) */
-}
-
-
-
-/* ============ تحديثات بعد شيل مستوى المنتجات من السايدبار ============ */
-
-/* القسم بقى بيمثل رابط فلترة مباشر، شكله أبسط من زرار أكورديون */
-.sec-btn{
-    width: 100%;
-    height: 44px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255,255,255,.03);
-    color: #dcdcdc;
-    font-size: 14.5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 14px;
-    cursor: pointer;
-    transition: background .25s, color .25s;
-}
-.sec-btn:hover{
-    background: rgba(0,229,255,.08);
-    color: white;
-}
-
-/* السهم بجانب القسم بيتحرك شوية لما تعمل hover، إحساس إنه هيودّيك مكان تاني */
-.sec-arrow{
-    font-size: 13px;
-    color: #9aa5ff;
-    transition: transform .25s;
-}
-.sec-btn:hover .sec-arrow{
-    transform: translateX(-4px);
-}
-
-/* القسم اللي متفلتر عليه دلوقتي */
-.sec-btn.active{
-    background: linear-gradient(120deg, rgba(117,104,255,.25), rgba(255,179,107,.18));
-    color: #fff;
-    border: 1px solid rgba(255,179,107,.4);
-}
-.sec-btn.active .sec-arrow{
-    color: #ffb36b;
-}
-
-/* عنوان صغير فوق شبكة المنتجات بيوضح انت بتشوف فلتر مين دلوقتي */
-#filter-title{
-    display: none;
-    text-align: center;
-    font-size: 15px;
-    color: #b8bcc8;
-    padding: 14px 20px 0;
-    letter-spacing: .5px;
-}
-
-
-
-/* ============ تصنيف: اسم + سهم منفصلين ============ */
-/* لو عندك قاعدة .cat-btn قديمة من قبل، امسحها أو خليها متضاربة مش هتتستخدم دلوقتي */
-
-.cat-header{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* اسم التصنيف - بياخد كل المساحة المتاحة ودايمًا قابل للدوس عليه للفلترة */
-.cat-name-btn{
-    flex: 1;
-    height: 50px;
-    border: none;
-    border-radius: 12px;
-    background: rgba(255,255,255,.05);
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: right;
-    padding: 0 16px;
-    cursor: pointer;
-    transition: background .25s, color .25s;
-}
-.cat-name-btn:hover{ background: rgba(255,255,255,.09); }
-
-.cat-name-btn.active{
-    background: linear-gradient(120deg, rgba(117,104,255,.3), rgba(255,179,107,.2));
+.cat-name-btn.active {
+    background: linear-gradient(120deg, rgba(117, 104, 255, .3), rgba(255, 179, 107, .2));
     color: #fff;
 }
 
-/* زرار السهم - منفصل تمامًا، وظيفته الوحيدة فتح/قفل الأقسام */
-.cat-arrow-btn{
-    width: 44px;
-    height: 50px;
-    flex-shrink: 0;
-    border: none;
-    border-radius: 12px;
-    background: rgba(255,255,255,.05);
+.cat-arrow-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, .05);
     color: #9aa5ff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background .25s;
+    padding: 0 !important;
+    margin: 0 4px !important;
+    flex-shrink: 0;
+    border: none;
 }
-.cat-arrow-btn:hover{ background: rgba(255,255,255,.09); }
 
-.arrow{
-    font-size: 13px;
-    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+.cat-arrow-btn:hover {
+    background: rgba(255, 255, 255, .12);
 }
-.cat-item.open > .cat-header .cat-arrow-btn .arrow{
+
+.cat-arrow-btn .arrow {
+    font-size: 11px !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+.arrow {
+    font-size: 13px;
+    transition: transform .35s cubic-bezier(.22, .61, .36, 1);
+}
+
+.cat-item.open > .cat-header .cat-arrow-btn .arrow {
     transform: rotate(180deg);
 }
 
-/* حاوية الأقسام - مقفولة بالـ default، بتتفتح بس لما تدوس على السهم */
-.sections-wrap{
+/* ======================================== */
+/* ====== SECTIONS WRAP ====== */
+/* ======================================== */
+
+.sections-wrap {
     max-height: 0;
     overflow: hidden;
     transition: max-height .4s ease;
@@ -1025,18 +324,22 @@ background-position:600%;
     flex-direction: column;
     gap: 6px;
 }
-.cat-item.open > .sections-wrap{
+
+.cat-item.open > .sections-wrap {
     max-height: 600px;
     margin-top: 6px;
 }
 
-/* زرار القسم */
-.sec-btn{
+/* ======================================== */
+/* ====== SECTION BUTTONS ====== */
+/* ======================================== */
+
+.sec-btn {
     width: 100%;
     height: 44px;
     border: none;
     border-radius: 10px;
-    background: rgba(255,255,255,.03);
+    background: rgba(255, 255, 255, .03);
     color: #dcdcdc;
     font-size: 14.5px;
     display: flex;
@@ -1045,68 +348,287 @@ background-position:600%;
     padding: 0 14px;
     cursor: pointer;
     transition: background .25s, color .25s;
+    overflow: hidden;
 }
-.sec-btn:hover{ background: rgba(0,229,255,.08); color: white; }
 
-.sec-arrow{
-    font-size: 13px;
-    color: #9aa5ff;
-    transition: transform .25s;
+.sec-btn:hover {
+    background: rgba(0, 229, 255, .08);
+    color: white;
 }
-.sec-btn:hover .sec-arrow{ transform: translateX(-4px); }
 
-.sec-btn.active{
-    background: linear-gradient(120deg, rgba(117,104,255,.25), rgba(255,179,107,.18));
+.sec-btn.active {
+    background: linear-gradient(120deg, rgba(117, 104, 255, .25), rgba(255, 179, 107, .18));
     color: #fff;
-    border: 1px solid rgba(255,179,107,.4);
-}
-.sec-btn.active .sec-arrow{ color: #ffb36b; }
-
-/* عنوان الفلتر فوق شبكة المنتجات */
-#filter-title{
-    display: none;
-    text-align: center;
-    font-size: 15px;
-    color: #b8bcc8;
-    padding: 14px 20px 0;
-    letter-spacing: .5px;
+    border: 1px solid rgba(255, 179, 107, .4);
 }
 
-.empty-note{
-    text-align: center;
-    color: #6d7280;
-    font-size: 13px;
-}
-
-
-
-/* ============ إصلاح: منع أي عنصر من الطلوع برا حدود الـ sidebar ============ */
-
-.sidebar{
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-/* تثبيت حجم أي سهم/أيقونة جوه أزرار الأقسام والتصنيفات بشكل قاطع */
-.sec-arrow,
-.arrow{
-    font-size: 13px !important;
+.sec-arrow {
+    font-size: 12px !important;
     width: 14px !important;
     height: 14px !important;
     line-height: 14px !important;
+    color: #9aa5ff;
+    transition: transform .25s;
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-/* منع أي محتوى داخل زرار القسم يكبر أو يطلع بره حدوده */
-.sec-btn{
-    overflow: hidden;
+.sec-btn:hover .sec-arrow {
+    transform: translateX(-4px);
 }
 
-/* إلغاء تأثير القاعدة القديمة #categorylist button على حجم الخط
-   (كانت مكتوبة "18 px" بمسافة، وده خطأ كتابي بيخلي الخاصية تتجاهل بالكامل) */
-#categorylist button{
+.sec-btn.active .sec-arrow {
+    color: #ffb36b;
+}
+
+/* ======================================== */
+/* ====== FILTER TITLE ====== */
+/* ======================================== */
+
+#filter-title {
+    display: none;
+    text-align: center;
+    font-size: 15px;
+    color: #b8bcc8;
+    padding: 14px 20px 0;
+    letter-spacing: .5px;
+}
+
+.empty-note {
+    text-align: center;
+    color: #6d7280;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+/* ======================================== */
+/* ====== LOGO ====== */
+/* ======================================== */
+
+.background-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+    opacity: .08;
+    animation: floating 8s ease-in-out infinite;
+}
+
+.logo-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.logo-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #FFD700, silver, #454747, #E0E0E0, #D4AF37, #808080, #e2dc5b, #a2964c);
+    background-size: 600%;
+    animation: rgbMove 12s linear infinite, /*frameRotate 8s */ linear infinite; 
+    box-shadow: 0 0 20px rgba(0, 255, 255, .5), 0 0 35px rgba(255, 0, 255, .4);
+}
+
+.logo-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #111;
+}
+
+/* ======================================== */
+/* ====== WHATSAPP BUTTON ====== */
+/* ======================================== */
+
+.whatsapp-btn {
+    position: fixed;
+    top: 18px;
+    left: 95px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    background: linear-gradient(120deg, #7568ff, #c58cff, #ffb36b, #ffe16f, #7568ff);
+    background-size: 350% 350%;
+    animation: gradientMove 12s ease infinite;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+    transition: .35s;
+    z-index: 500;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+
+.whatsapp-btn i {
+    font-size: 20px;
+    animation: iconFloat 2.5s ease-in-out infinite;
+}
+
+/* ======================================== */
+/* ====== KEYFRAMES ====== */
+/* ======================================== */
+
+@keyframes rgbBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floating {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes frameRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes aurora {
+    0% { transform: translate(-8%, -8%) rotate(0deg); }
+    50% { transform: translate(8%, 5%) rotate(180deg); }
+    100% { transform: translate(-5%, 10%) rotate(360deg); }
+}
+
+@keyframes rgbMove {
+    0% { background-position: 0%; }
+    100% { background-position: 600%; }
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* ======================================== */
+/* ====== PRICE CONTAINER ====== */
+/* ======================================== */
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.old-price {
+    color: #888;
+    text-decoration: line-through;
     font-size: 14px;
+}
+
+.new-price {
+    color: chartreuse;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price-details {
+    font-size: 11px;
+    color: #6d7280;
+    text-align: center;
+}
+
+/* ======================================== */
+/* ====== RESPONSIVE DESIGN ====== */
+/* ======================================== */
+
+/* للتابلت */
+@media screen and (max-width: 1024px) {
+    body { font-size: 15px; }
+    #products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    .logo-frame { width: 130px; height: 130px; }
+    #menuBtn { width: 55px; height: 55px; font-size: 22px; top: 20px; left: 15px; }
+    .whatsapp-btn { left: 75px; padding: 10px 20px; font-size: 15px; top: 22px; }
+    .sidebar { width: 260px; padding-top: 90px; }
+}
+
+/* للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    
+    #products {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .card { padding: 12px; max-width: 100%; margin: 0 auto; }
+    .card img { height: 150px; }
+    .logo-frame { width: 100px; height: 100px; margin-top: 10px; }
+    
+    #menuBtn { width: 50px; height: 50px; font-size: 20px; top: 15px; left: 12px; }
+    .whatsapp-btn { left: 65px; padding: 8px 14px; font-size: 13px; top: 18px; gap: 6px; }
+    .whatsapp-btn i { font-size: 16px; }
+    
+    .sidebar { width: 100%; max-width: 300px; padding-top: 80px; }
+    .cat-name-btn { height: 40px; font-size: 14px; padding: 0 12px; }
+    .cat-arrow-btn { width: 28px !important; height: 28px !important; min-width: 28px !important; min-height: 28px !important; }
+    .sec-btn { height: 38px; font-size: 13px; padding: 0 12px; }
+    
+    .header input { width: 90%; max-width: 300px; height: 35px; font-size: 14px; }
+    #filter-title { font-size: 14px; padding: 10px 12px 0; }
+    .price { font-size: 16px; }
+    .old-price { font-size: 13px; }
+    .new-price { font-size: 18px; }
+}
+
+/* للشاشات الصغيرة جداً */
+@media screen and (max-width: 480px) {
+    .logo-frame { width: 80px; height: 80px; }
+    #menuBtn { width: 42px; height: 42px; font-size: 16px; top: 12px; left: 10px; }
+    .whatsapp-btn { left: 55px; padding: 6px 12px; font-size: 11px; top: 14px; gap: 4px; }
+    .whatsapp-btn i { font-size: 13px; }
+    .card img { height: 120px; }
+    .card h2 { font-size: 15px; }
+    .sidebar { max-width: 280px; padding-top: 70px; }
+}
+
+/* إصلاح overflow */
+body { overflow-x: hidden; max-width: 100vw; }
+
+/* في التلفونات نجبر العمود على 1 */
+@media screen and (max-width: 600px) {
+    #products { grid-template-columns: 1fr !important; }
 }
