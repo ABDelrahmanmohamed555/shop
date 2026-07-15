@@ -6,7 +6,7 @@ const refrigerators = {
         {
             name : "ماتور" ,
             products :[
-                {name :" ماتور 77", price :   "0", image :"refs/EMG-77.png" , specs : ["الكود GMS-77","+ ضمان سنة"]} ,
+                {name :"ZMC ماتور مقاس خمس (1/5) ", price :   "0", image :"refs/EMG-77.png" , specs : [ " (ZMC) الماركة : زانوسي","الكود :EMG-77AA" ,"الفريون : 134" ,"شامل الشحن و التركيب ","ضمان سنة معتمد" ,]} ,
                 {name :" ماتور 80", price :   "0", image :"refs/EMG-80.png"} ,
                 {name :" ماتور 66", price :   "0", image :"refs/GM-66.png"} ,
                 {name :" ماتور 12", price :   "0", image :"refs/GP-12.png"} ,
