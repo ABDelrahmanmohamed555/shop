@@ -42,7 +42,12 @@ const refrigerators = {
         {
             name: "تايمر",
 
-            products: []
+            products: [
+
+                {name :"تايمر توشيبا",price :'0',image:"refs/kiriazi_timer.png",specs :["الماركة : توشيبا","الكود : TMDFY06ED1","متوافق مع ثلاجات توشيبا",]},
+                {name : "تايمر كريازي",price :"0",image :"refs/kiriazi_timer.png",specs:["الماركة : SADEK","الكود : TMDC625-1","متوافق مع الثلاجات الكريازي دي فروست","دورة التبريد : 6 ساعات"]},
+                {name : "تايمر اديال",price :"0",image :"refs/idial_timer.png",specs:["الماركة : SADEK","الكود : SC706","متوافق مع الثلاجات الاديال نو فروست","دورة التبريد : 8 ساعات"]},
+            ]
         },
 
         {
