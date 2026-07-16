@@ -29,7 +29,8 @@ const refrigerators = {
                 {name : "ترموستات 124",price : "0",image : "refs/124g.png",specs :["الكود : PFN-124G","متوافقة مع ثلاجات اديال ايليت"]},
                 {name :"ترموستات  +-  30",price :"0",image :"refs/+-30.png",specs:["الكود : f/2000","متوافقة مع ثلاجات عرض "]},
                 {name : "RANCO ترموستات ثلاجة كريازي (هوائي)",price :"0",image :"refs/s3534.png",specs:["الماركة : RANCO (اوروبي)","الكود : K50-S3534","متوافق مع الثلاجات الكريازي 2 باب","capillary : 1350 mm"]},
-                {name :"ترموستات ديب فريزر قصير",price :"0",image :"refs/216382.png",specs :["الماركة : ATEA (ايطالي)","الكود : 216/382","متوافق مع فريزر 3 طرف","capillary : 1000 mm"]}
+                {name :"ترموستات ديب فريزر قصير",price :"0",image :"refs/216382.png",specs :["الماركة : ATEA (ايطالي)","الكود : 216/382","متوافق مع فريزر 3 طرف","capillary : 1000 mm"]},
+                {name :"RENGO ترموستات",price :"0",image :"refs/VT9.png",specs :["الماركة : RENGO","الكود : VT9","متوافق مع ثلاجات و فريزر 3 طرف","capillary : 1200 mm"]},
             ]   
         },
         {
@@ -68,10 +69,10 @@ const refrigerators = {
             name : "مجموعة relay + overlot" ,
             products : []
         },
-        // {
-        //     name : "رف ثلاجة" ,
-        //     products : []
-        // },
+        {
+            name : "كابلري" ,
+            products : []
+        },
         
         {
             name : "لوحة تحكم (كارتة)" ,
@@ -86,8 +87,16 @@ const refrigerators = {
             products : []
         },
         {
-            name : "اخرى" ,
-            products : []
+            name :   "اخرى" ,
+            products : [
+                {name : "بلف شحن" ,price : "0",image :"refs/balf.png",specs : ["مقاسين"]},
+                {name : "فلتر مقاس كبير",price : "0",image :"refs/big_filter.png",specs :["الماركة : اطالي"]} ,
+                {name :"فلتر مقاس صغير",price :"0",image :"refs/small_filter.png",specs :["الماركة : اطالي"]},
+                {name :"فريزر (مبخر)",price :"0",image :"refs/freezer.png",specs :["الماركة :EVIDAL","متوافق مع الثلاجات 1باب 8-10 قدم"]},
+                {name :"لمبة ثلاجة توشيبا",price :"0",image :"refs/toshiba_lamb.png",specs :["الماركة :توشيبا","متوافقة مع ثلاجات توشيبا"]},
+                {name :"ثوزان مواسير",price :"10",image :"refs/thaosan.png",specs :["منظف مواسير ثلاجة"]},
+                {name :"لمبة ثلاجة",price :"0",image :"refs/main_lamb.png",specs :["الماركة :AL-REDA","متوافقة مع معظم انواع الثلاجات"]},
+            ]
         },
 
 
