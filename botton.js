@@ -173,9 +173,10 @@ function toggleCardExpand(card) {
  
 // إغلاق أي كارت مفتوح بزرار ESC
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        const open = document.querySelector(".card.expanded");
-        if (open) toggleCardExpand(open);
+    if (e.key === "Escape"
+        && document.body.classList.contains("card-modal-open")
+        && !imageLightbox.classList.contains("active")) {
+        closeCardModal();
     }
 });
  

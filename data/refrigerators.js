@@ -20,7 +20,7 @@ const refrigerators = {
             name: "ترموستات",
 
             products: [
-                
+                {name:"diesel ترموستات 1102",price :"0",image :"refs/1102.png",specs :["الماركة : DIESEL","الكود : K59-L1102(VT9)","المقاس : 1102","capillary : 800 mm"]}
             ]
         },
         {
@@ -52,18 +52,15 @@ const refrigerators = {
             name : "فلتر" ,
             products : []
         },
-        {
-            name : "بلف شحن" ,
-            products : []
-        },
+        
         {
             name : "مجموعة relay + overlot" ,
             products : []
         },
-        {
-            name : "رف ثلاجة" ,
-            products : []
-        },
+        // {
+        //     name : "رف ثلاجة" ,
+        //     products : []
+        // },
         {
             name : "مكثف تقويم" ,
             products : []
