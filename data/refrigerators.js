@@ -96,6 +96,7 @@ const refrigerators = {
                 {name :"لمبة ثلاجة توشيبا",price :"0",image :"refs/toshiba_lamb.png",specs :["الماركة :توشيبا","متوافقة مع ثلاجات توشيبا"]},
                 {name :"ثوزان مواسير",price :"10",image :"refs/thaosan.png",specs :["منظف مواسير ثلاجة"]},
                 {name :"لمبة ثلاجة",price :"0",image :"refs/main_lamb.png",specs :["الماركة :AL-REDA","متوافقة مع معظم انواع الثلاجات"]},
+                {name :"درج مياه ماتور",price :"0",image :"refs/cover.png",specs :["حماية الماتور من المياه"]},
             ]
         },
 
