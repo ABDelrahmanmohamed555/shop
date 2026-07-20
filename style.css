@@ -914,7 +914,6 @@ body { overflow-x: hidden; max-width: 100vw; }
     width: 80vw;
     height: 80vh;
     background: rgba(8, 10, 16, 0.5);
-    backdrop-filter: blur(30px);
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
@@ -925,6 +924,17 @@ body { overflow-x: hidden; max-width: 100vw; }
     overflow: hidden;
     transform: scale(0.08);
     border-radius: 50%;
+}
+
+/* [CHANGED] blur على عنصر ثابت مش متحرك (تحسين أداء) */
+.expand-layer::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 10, 16, 0.5);
+    backdrop-filter: blur(30px);
+    z-index: -2;
+    pointer-events: none;
 }
 
 .bg-layer {
@@ -947,6 +957,7 @@ body { overflow-x: hidden; max-width: 100vw; }
     visibility: visible;
     transform: scale(1);
     border-radius: 24px;
+    will-change: transform, opacity;
 }
 
 .close-expand {
@@ -1022,7 +1033,7 @@ body { overflow-x: hidden; max-width: 100vw; }
 .slider-title.visible {
     opacity: 1;
 }
-
+ 
 
 /* ========== [CHANGED] قزرار عرض الكل/الأقسام مصغرة ========== */
 .all-products-btn {

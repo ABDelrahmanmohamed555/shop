@@ -87,7 +87,7 @@ function showSections(index) {
         }
         list.appendChild(btn);
     });
-}
+} 
 
 document.querySelector('.view-sections-btn').addEventListener('click', () => {
     showSections(currentIndex);
