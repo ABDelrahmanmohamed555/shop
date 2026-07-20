@@ -26,7 +26,6 @@ function buildHorizontalSlider() {
                 </div>
                 <div class="card-back">
                     <div class="card-back-bg" style="background-image: url(${category.image})"></div>
-                    <h3>${category.name}</h3>
                     <div class="section-list"></div>
                 </div>
             </div>

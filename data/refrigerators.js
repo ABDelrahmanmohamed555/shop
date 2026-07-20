@@ -78,7 +78,9 @@ const refrigerators = {
         },
         {
             name : "فريون" ,
-            products : []
+            products : [
+                {name :"فريون 404",price:"0",image:"refs/ferion_404.png",specs:["الحجم : 2.5 كيلو"]}
+            ]
         },
         
         
@@ -104,11 +106,15 @@ const refrigerators = {
         
         {
             name : "لوحة تحكم (كارتة)" ,
-            products : []
+            products : [
+                {name : "كارتة ثلاجة شارب",price :"0",image:"refs/sharp_board.png",specs:["الماركة : العربي","الكود : RF-SH-MAINBORD-58A0"]}
+            ]
         },
         {
             name : "حساسات" ,
-            products : []
+            products : [
+                {name :"حساس ثلاجة كريازي",price :"0",image :"refs/kiriazi_sensor.png,",specs:["الماركة : POWER"]}
+            ]
         },
         {
             name : "ثيرمو ديسك" ,
