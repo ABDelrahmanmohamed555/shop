@@ -113,7 +113,7 @@ const refrigerators = {
         {
             name : "حساسات" ,
             products : [
-                {name :"حساس ثلاجة كريازي",price :"0",image :"refs/kiriazi_sensor.png,",specs:["الماركة : POWER"]}
+                {name :"حساس ثلاجة كريازي",price :"0",image :"refs/kirazi_sensor.png",specs:["الماركة : POWER"]}
             ]
         },
         {
