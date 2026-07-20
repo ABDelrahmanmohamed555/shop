@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>H.S_products</title>
         <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="slider.css">
         <link rel="icon" type="image/png" href="images/icon.png">
 
 
-     <h4 style = "text-align: center; color : darkblue;"  >TᕼE ᑭᖇOᗪᑌᑕTᔕ </h4>
-        <h3 style = "text-align :center"> made by: unknown</h3>
+     
+        <h3 style = "text-align :center"> unknown</h3>
         <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -38,21 +39,67 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </div>
 
 </header>
-<button id="menuBtn">
-    ☰
- </button>
- <div class="overlay"></div>
 
+ <!-- زر القائمة -->
+<!-- زر القائمة -->
+<button id="menuBtn">☰</button>
 
-        <div class="sidebar">
-    <div class="sidebar-header">
-        <span class="sidebar-kicker">H.S REPAIR CENTER</span>
-        <h2><i class="fa-solid fa-screwdriver-wrench"></i> التصنيفات</h2>
-        <div class="sidebar-underline"></div>
-    </div>
-    <div id="categorylist"></div>
+<!-- ====== الطبقة المنتشرة (Full Screen) ====== -->
+ <h2 class="slider-title">التصنيفات</h2>
+<div id="expandLayer" class="expand-layer">
+        
+    
+    <!-- ====== حاوية السلايدر الأفقي ====== -->
+    <div class="slider-wrapper">
+     <div class ="bg-layer bg-layer-a"></div>
+     <div class="bg-layer bg-layer-b"></div>
+
+    <button class="all-products-btn">كل المنتجات</button>
+    <button class="view-sections-btn">الأقسام</button>
+        
+        <!-- ====== السلايدر الأفقي ====== -->
+<div class="horizontal-slider" id="horizontalSlider">
+            
+            <!-- التصنيفات هتتحط هنا بالجافاسكريبت -->
+            
 </div>
+<div class="slider-shadow left-shadow"></div>
+
+<div class="slider-shadow right-shadow"></div>
+        
+        <!-- ====== المستطيل المحدد (في المنتصف) ====== -->
+<div class="selector-frame" id="selectorFrame">
+            <div class="selector-glow"></div>
+            <div class="selector-border"></div>
+        </div>
+        
+        <!-- ====== اسم التصنيف المحدد ====== -->
+        <div class="selected-category-label" id="selectedCategoryLabel">
+            <span class="label-text">اختر تصنيفاً</span>
+            <span class="label-arrow">▼</span>
+        </div>
+<div class="selected-category-description">
+
+</div>
+        
+        <!-- ====== مؤشر التقدم (Progress Bar) ====== -->
+        
+        
+    </div>
+    
+    <!-- ====== زر الإغلاق ====== -->
+    
+    
+</div>
+<button class="close-expand" id="closeExpandBtn">✕</button>
+
+
+
+</button>
+
+<!-- الخلفية -->
 <div class="overlay"></div>
+       
 
 
  
@@ -62,7 +109,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         
         <div class = "header">
             
-         <input  style = "text-align :center"  type = "text" placeholder = "ابحث عن منتج....">
+         <input
+    id="searchInput"
+    style="text-align:center"
+    type="text"
+    placeholder="ابحث عن منتج....">
 
 
         </div>
@@ -77,39 +128,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </div>
 
 
-        <div id = "products">
-        
-            
-        
-    
-
-
-<!-- <div class = "card">
-<img src = "images/toshiba_lamp.png" >
-<h2>لمبة ثلاجة توشيبا</h2>
-<p style = "color : chartreuse" : >price : 40 EGP </p> 
-</div>
-
-
-<div class = "card">
-<img src = "images/heater_cable.png" >
-<h2>كابل مكواة</h2>
-<h5>(غير شامل التركيب)</h5>
-<p style = "color : chartreuse" :>price : 50 EGP </p> 
-</div>
-
-
-<div class = "card">
-<img src = "images/fridge_lamb.png" >
-<h2>لمبة ثلاجة</h2>
-<p style = "color : chartreuse" :>price : 25 EGP </p> 
-</div> -->
-
-<!--add_here-->
-
-
-
-
+ 
     
      
 
@@ -128,7 +147,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <script src = "data/heaters.js"></script>
 <script src = "data/iron.js"></script>
 <script src = "data/microwave.js"></script>
+<script src = "data/capacitors.js"></script>
 <script src="botton.js"></script>
+<script src="category-slider.js"></script>
 
     </body>
     

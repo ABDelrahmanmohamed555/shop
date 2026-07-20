@@ -1,5 +1,6 @@
 const refrigerators = {
-    name: "ثلاجة",
+    name: "ثلاجة و فريزر",
+    image :"images/categories/fridge.png",
 
     sections: [
 
@@ -36,7 +37,15 @@ const refrigerators = {
         {
             name : "سخانات" ,
             products : [
-
+                {name:"سخان ثلاجة كريازي",price:"0",image:"refs/tomthon.png",specs:["الماركة : TOMTHON","متوافق مع ثلاجات كريازي 14 قدم نو فروست"]},
+                {name:"سخان صرف ارضية فريزر",price:"0",image:"refs/eivel.png",specs:["الماركة : EIVEL","متوافق مع ديب فريزر كريازي نو فروست"]},
+                {name:"سخان صرف ارضية فريزر",price:"0",image:"refs/paper_diesel.png",specs:["الماركة : DIESEL","متوافق مع ديب فريزر كريازي نو فروست"]},
+                {name:"سخان صرف ارضية ثلاجة",price:"0",image:"refs/power.png",specs:["الماركة : POWER","متوافق مع  ثلاجة كريازي نو فروست 14 قدم"]},
+                {name:"سخان ثلاجة كريازي",price:"0",image:"refs/sadek.png",specs:["الماركة : SADEK","متوافق مع  ثلاجة كريازي نو فروست 18 قدم"]},
+                {name:"سخان ثلاجة توشيبا",price:"0",image:"refs/fast_forward.png",specs:["الماركة : FAST FORWARD","الكود : RF-T-HEAT-14-16F","متوافق مع  ثلاجة توشيبا 14-16 قدم نو فروست"]},
+                {name:"سخان ديب فريزر توشيبا",price:"0",image:"refs/arabi.png",specs:["الماركة : العربي","28K-19 : الكود","متوافق مع ديب فريزر توشيبا نو فروست"]},
+                {name:"سخان ثلاجة توشيبا",price:"0",image:"refs/blass_diesel.png",specs:["الماركة : DIESEL","متوافق مع ثلاجة توشيبا 12 قدم نو فروست"]},
+                {name:"سخان ثلاجة كريازي",price:"0",image:"refs/kiriazi18.png",specs:["الماركة : SADEK","متوافق مع ثلاجة كريازي 18 قدم نو فروست"]},
             ]
         },
 
@@ -46,14 +55,22 @@ const refrigerators = {
             products: [
 
                 {name :"تايمر توشيبا",price :'0',image:"refs/toshiba_timer.png",specs :["الماركة : توشيبا","الكود : TMDFY06ED1","متوافق مع ثلاجات توشيبا",]},
-                {name : "تايمر كريازي",price :"0",image :"refs/kiriazi_timer.png",specs:["الماركة : SADEK","الكود : TMDC625-1","متوافق مع الثلاجات الكريازي دي فروست","دورة التبريد : 6 ساعات"]},
-                {name : "تايمر اديال",price :"0",image :"refs/idial_timer.png",specs:["الماركة : SADEK","الكود : SC706","متوافق مع الثلاجات الاديال نو فروست","دورة التبريد : 8 ساعات"]},
+                {name : "تايمر كريازي",price :"0",image :"refs/kiriazi_timer.png",specs:["الماركة : SADEK","الكود : TMDC625-1","متوافق مع الثلاجات الكريازي دي فروست",]},
+                {name : "تايمر اديال",price :"0",image :"refs/idial_timer.png",specs:["الماركة : SADEK","الكود : SC706","متوافق مع الثلاجات الاديال نو فروست",]},
             ]
         },
 
         {
             name : "مروحة تبريد" ,
-            products :[]
+            products :[
+                {name:"مروحة تبريد ثلاجة عرض",price :"0",image :"refs/fan_desk.png",specs:["الماركة : SADEK","القوة : 30 واط","عدد اللفات في الدقيقة : 2200"]},
+                {name:"مروحة تبريد ماتور",price :"0",image :"refs/fan_10w.png",specs:["الماركة : GLOBAL","القوة : 10 واط","عدد اللفات في الدقيقة : 1250"]},
+                {name:"مروحة تبريد ماتور",price :"0",image :"refs/fan_16w.png",specs:["الماركة : GLOBAL","القوة : 16 واط","عدد اللفات في الدقيقة : 1300"]},
+                {name:"ريشة مروحة تبريد(صغير)",price :"0",image :"refs/feather_s.png",specs:["لمروحة تبريد الماتور"]},
+                {name:"ريشة مروحة تبريد(وسط)",price :"0",image :"refs/feather_m.png",specs:["لروحة تبريد الماتور"]},
+                {name:"ريشة مروحة تبريد(كبير)",price :"0",image :"refs/feather_l.png",specs:["لروحة تبريد الماتور"]},
+                {name:"مروحة تبريد ماتور",price :"0",image :"refs/s_fan.png",specs:["الماركة : TOMTHON","القوة : 9 واط"]},
+            ]
         },
         {
             name : "شبك (سربنتينة)" ,
@@ -66,12 +83,23 @@ const refrigerators = {
         
         
         {
-            name : "مجموعة relay + overlot" ,
-            products : []
+            name : "مجموعة relay + over load" ,
+            products : [
+                {name:"مجموعة ماتور ثلاجة",image:"refs/over_load.png",price :"0",specs:["الماركة : SADEK","(over load)النوع : اوفر لود"]},
+                {name:"مجموعة ماتور ثلاجة",image:"refs/relay_tosheba.png",price :"0",specs:["الماركة : TOSHEBA","(relay)النوع : ريلاي"]},
+                {name:"مجموعة ماتور ثلاجة",image:"refs/relay.png",price :"0",specs:["الماركة : DIESEL","(relay)النوع : ريلاي"]},
+            ]
         },
         {
             name : "كابلري" ,
-            products : []
+            products : [
+                {name : "كابلري مقاس 28",price:"0",image :"refs/28.png",specs:["الماركة : DIESEL"]},
+                {name : "كابلري مقاس 31",price:"0",image :"refs/31.png",specs:["الماركة : DIESEL"]},
+                {name : "كابلري مقاس 36",price:"0",image :"refs/36.png",specs:["الماركة : SADEK"]},
+                {name : "كابلري مقاس 55",price:"0",image :"refs/55.png",specs:["الماركة : SADEK"]},
+                {name : "كابلري مقاس 70",price:"0",image :"refs/70.png",specs:["الماركة : SADEK"]},
+
+            ]
         },
         
         {

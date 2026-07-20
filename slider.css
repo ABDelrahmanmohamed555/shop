@@ -1,0 +1,359 @@
+/* ===========================================================
+   H.S Slider - Coverflow Style
+   Version 3
+=========================================================== */
+
+.slider-wrapper{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+
+/* ===========================================================
+   Slider Area
+=========================================================== */
+
+.horizontal-slider{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+/* ===========================================================
+   Cards
+=========================================================== */
+
+.category-slide-h{
+    position:absolute;
+    left:50%;
+    top:50%;
+    height: min(60vh, 420px);
+    aspect-ratio: 9 / 16;
+    border-radius: 20px;
+    overflow:hidden;
+    cursor:pointer;
+    transform: translate(-50%,-50%);
+    transition:
+        transform .5s cubic-bezier(.22,.61,.36,1),
+        opacity .4s,
+        filter .4s,
+        box-shadow .4s,
+        height .5s cubic-bezier(.22,.61,.36,1);
+    user-select:none;
+    will-change:transform;
+}
+
+.category-slide-h img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    pointer-events:none;
+}
+
+/* ===========================================================
+   Active
+=========================================================== */
+
+.category-slide-h.active{
+    height: min(72vh, 500px);
+    opacity:1;
+    filter:none;
+    z-index:100;
+    box-shadow: 0 25px 60px rgba(0,0,0,.55);
+}
+
+/* ===========================================================
+   Near
+=========================================================== */
+
+.category-slide-h.near{
+    height: min(55vh, 380px);
+    opacity:.45;
+    filter:blur(1px);
+}
+
+/* ===========================================================
+   Far
+=========================================================== */
+
+.category-slide-h.far{
+    height: min(45vh, 310px);
+    opacity:.15;
+    filter:blur(3px);
+}
+
+/* ===========================================================
+   Selector Frame (9:16)
+=========================================================== */
+
+.selector-frame{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    height: min(72vh, 500px);
+    aspect-ratio: 9 / 16;
+    border-radius:24px;
+    pointer-events:none;
+    z-index:500;
+}
+
+.selector-border{
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    border:3px solid rgba(255,210,40,.95);
+    box-shadow:
+        0 0 30px rgba(255,210,40,.25),
+        inset 0 0 20px rgba(255,210,40,.08);
+}
+
+.selector-glow{
+    position:absolute;
+    inset:-30px;
+    border-radius:inherit;
+    background:
+        radial-gradient(circle,
+        rgba(255,210,40,.12),
+        transparent 70%);
+}
+
+/* ===========================================================
+   Category Name
+=========================================================== */
+
+.selected-category-label{
+    position:absolute;
+    bottom:45px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    text-align:center;
+    z-index:600;
+}
+
+.label-text{
+     background: linear-gradient(120deg, #fff, #ffb36b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-shadow: 0 5px 20px rgba(0,0,0,.45);
+}
+
+.label-arrow{
+    display:none;
+}
+
+.selected-category-description{
+    position:absolute;
+    bottom:12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:70%;
+    text-align:center;
+    color:#c7c7c7;
+    font-size:15px;
+}
+
+/* ===========================================================
+   Side Shadows
+=========================================================== */
+
+.slider-shadow{
+    position:absolute;
+    top:0;
+    width:18vw;
+    height:100%;
+    z-index:300;
+    pointer-events:none;
+}
+
+.left-shadow{
+    left:0;
+    background:
+        linear-gradient(to right,
+        rgba(8,10,16,1),
+        transparent);
+}
+
+.right-shadow{
+    right:0;
+    background:
+        linear-gradient(to left,
+        rgba(8,10,16,1),
+        transparent);
+}
+
+/* ==========================================
+   Hover
+========================================== */
+
+.category-slide-h:hover{
+    filter:none;
+}
+
+/* ==========================================
+   Animation
+========================================== */
+
+.category-slide-h{
+    animation:sliderFade .45s ease;
+}
+
+@keyframes sliderFade{
+    from{
+        opacity:0;
+        transform: translate(-50%,-50%) scale(.8);
+    }
+    to{
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:900px){
+    .category-slide-h{
+        height: min(55vh, 380px);
+    }
+    .category-slide-h.active{
+        height: min(62vh, 430px);
+    }
+    .selector-frame{
+        height: min(62vh, 430px);
+    }
+    .label-text{
+        font-size:24px;
+    }
+    .selected-category-description{
+        width:90%;
+        font-size:13px;
+    }
+}
+
+@media(max-width:600px){
+    .category-slide-h{
+        height: min(45vh, 300px);
+    }
+    .category-slide-h.active{
+        height: min(55vh, 380px);
+    }
+    .selector-frame{
+        height: min(55vh, 380px);
+    }
+    .label-text{
+        font-size:20px;
+    }
+    .selected-category-description{
+        display:none;
+    }
+    .slider-shadow{
+        width:60px;
+    }
+}
+
+
+/* ========== [CHANGED] 3D Flip for Sections ========== */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(.22,.61,.36,1);
+}
+.card-front, .card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 40px 14px 14px;
+    overflow: hidden;
+}
+.card-back-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.35);
+    z-index: -1;
+}
+.card-back h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 2px;
+    z-index: 1;
+}
+.section-item {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    text-align: center;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+
+.section-item:hover {
+    background: rgba(255, 210, 40, 0.15);
+    border-color: rgba(255, 210, 40, 0.4);
+}
+.category-slide-h.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.section-list {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 2px 0;
+    z-index: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+.section-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.section-item.section-empty {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
