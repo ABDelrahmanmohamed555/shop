@@ -19,15 +19,3 @@ const iron = {
 }
 
 
-// // في الملف بتاع التصنيف (مثلاً data/fans.js)
-// {
-//     name: "عام",
-//     products: [
-//         {
-//             name: "اسم المنتج",
-//             price: "0",
-//             image: "fans/product.png",
-//             specs: ["مواصفة 1", "مواصفة 2"]
-//         }
-//     ]
-// }
