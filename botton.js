@@ -11,6 +11,17 @@ const filterTitle = document.getElementById("filter-title");
 const searchInput = document.getElementById("searchInput");
 const expandLayer = document.getElementById("expandLayer");
 
+// ========== [CHANGED] Adaptive Quality (touch devices only) ==========
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+if (isTouchDevice) {
+    let isLowEnd = false;
+    if (navigator.deviceMemory && navigator.deviceMemory < 4) isLowEnd = true;
+    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) isLowEnd = true;
+    document.documentElement.style.setProperty('--blur-main', isLowEnd ? '8px' : '30px');
+    document.documentElement.style.setProperty('--blur-bg', isLowEnd ? '6px' : '30px');
+    document.documentElement.style.setProperty('--blur-aurora', isLowEnd ? '40px' : '130px');
+}
+
 
 
 // ====== طبقة التعتيم خلف الكارت المتمدد ======
