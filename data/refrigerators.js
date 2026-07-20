@@ -86,7 +86,7 @@ const refrigerators = {
             name : "مجموعة relay + over load" ,
             products : [
                 {name:"مجموعة ماتور ثلاجة",image:"refs/over_load.png",price :"0",specs:["الماركة : SADEK","(over load)النوع : اوفر لود"]},
-                {name:"مجموعة توشيبا للثلاجة",image:"refs/relay_tosheba.png",price :"0",specs:["الماركة : TOSHEBA","(relay)النوع : ريلاي"]},
+                {name:"مجموعة توشيبا للثلاجة",image:"refs/relay_tosheba.png",price :"0",specs:["الماركة : TOSHIBA","(relay)النوع : ريلاي"]},
                 {name:"مجموعة ماتور ثلاجة",image:"refs/relay.png",price :"0",specs:["الماركة : DIESEL","(relay)النوع : ريلاي"]},
             ]
         },
