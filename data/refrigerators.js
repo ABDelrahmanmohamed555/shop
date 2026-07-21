@@ -66,8 +66,9 @@ const refrigerators = {
                 {name:"مروحة تبريد ثلاجة عرض",price :"0",image :"refs/fan_desk.png",specs:["الماركة : SADEK","القوة : 30 واط","عدد اللفات في الدقيقة : 2200"]},
                 {name:"مروحة تبريد ماتور",price :"0",image :"refs/fan_10w.png",specs:["الماركة : GLOBAL","القوة : 10 واط","عدد اللفات في الدقيقة : 1250"]},
                 {name:"مروحة تبريد ماتور",price :"0",image :"refs/fan_16w.png",specs:["الماركة : GLOBAL","القوة : 16 واط","عدد اللفات في الدقيقة : 1300"]},
-                {name:"ريشة مروحة تبريد(صغير)",price :"0",image :"refs/feather_s.png",specs:["لمروحة تبريد الماتور"]},
-                {name:"ريشة مروحة تبريد(وسط)",price :"0",image :"refs/feather_m.png",specs:["لروحة تبريد الماتور"]},
+                {name:"ريشة مروحة تبريد بلاستيك (صغير)",price :"0",image :"refs/feather_s.png",specs:["لمروحة تبريد الماتور"]},
+                {name:"ريشة مروحة تبريد(صغير)",price :"0",image :"refs/feather_m.png",specs:["لروحة تبريد الماتور"]},
+                {name:"ريشة مروحة تبريد(وسط)",price :"0",image :"refs/feather_l.png",specs:["لروحة تبريد الماتور"]},
                 {name:"ريشة مروحة تبريد(كبير)",price :"0",image :"refs/feather_l.png",specs:["لروحة تبريد الماتور"]},
                 {name:"مروحة تبريد ماتور",price :"0",image :"refs/s_fan.png",specs:["الماركة : TOMTHON","القوة : 9 واط"]},
             ]
