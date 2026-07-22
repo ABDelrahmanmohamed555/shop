@@ -110,7 +110,9 @@ const refrigerators = {
         {
             name : "لوحة تحكم (كارتة)" ,
             products : [
-                {name : "كارتة ثلاجة شارب",price :"0",image:"refs/sharp_board.png",specs:["الماركة : العربي","الكود : RF-SH-MAINBORD-58A0"]}
+                {name : "كارتة ثلاجة شارب",price :"0",image:"refs/sharp_board.png",specs:["الماركة : العربي","الكود : RF-SH-MAINBORD-58A0"]},
+                {name : "كارتة ثلاجة هيتاشي",price :"0",image:"refs/hitachi_board.png",specs:["الماركة : HITACHI","الكود : PTR-VG710P3 050"]},
+                {name : "كارتة ديب فريزر كريازي شاشة كبيرة",price :"0",image:"refs/deep_freezer_board.png",specs:["الماركة : EIVEL"]},
             ]
         },
         {
