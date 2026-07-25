@@ -549,3 +549,19 @@ searchInput.addEventListener("input", () => {
 secretEye.addEventListener("click", () => {
     closeEyeEasterEgg();
 });
+
+
+// ====== Cat Easter Egg ======
+const catOverlay = document.getElementById("catOverlay");
+
+searchInput.addEventListener("input", () => {
+    const val = searchInput.value.trim().toLowerCase();
+    if (val === "cat") {
+        catOverlay.classList.add("active");
+        searchInput.value = "";
+    }
+});
+
+catOverlay.addEventListener("click", () => {
+    catOverlay.classList.remove("active");
+});

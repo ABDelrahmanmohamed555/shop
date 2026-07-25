@@ -1362,3 +1362,35 @@ body { overflow-x: hidden; max-width: 100vw; }
     50% { transform: translateY(-25px); }
     100% { transform: translateY(0); }
 }
+
+
+
+
+/* ====== CAT EASTER EGG ====== */
+.cat-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999998;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    cursor: pointer;
+}
+.cat-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.cat-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+.cat-overlay.active img {
+    transform: scale(1);
+}
