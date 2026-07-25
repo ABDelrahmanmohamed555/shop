@@ -19,7 +19,24 @@ const washing_machine = {
             {name:"جير بوكس غسالة هاف مقاسات",price:"0",image:"washers/gear_box.png",specs:["الماركة : SADEK-ALABOUDY-DIESEL"]},
             {name:"جير بوكس غسالة توشيبا 10 كيلو",price:"0",image:"washers/toshiba10k.png",specs:["متوافق مع غسالة توشيبا فوق اوتوماتيك"]},
             {name:"جير بوكس غسالة توشيبا 8 كيلو",price:"0",image:"washers/toshiba8kG.png",specs:["متوافق مع غسالة توشيبا فوق اوتوماتيك"]},
+            {name:"جير بوكس غسالة سامسونج",price:"0",image:"washers/lg&samsung.png",specs:["LG متوافق مع غسالة سامسونج و"]},
+            {name:"جير بوكس غسالة يونيفيرسال",price:"0",image:"washers/universal_gear.png",specs:["متوافق مع غسالات يونيفيرسال 8,10 كيلو فوق اوتوماتيك"]},
+            {name:"جير بوكس غسالة زانوسي",price:"0",image:"washers/ZMC.png",specs:["الماركة : SADEK"]},
+            {name:"جير بوكس غسالة يونيون اير",price:"0",image:"washers/uionion.png",specs:["الماركة : DIESEL","الكود : SAN40"]},
+            {name:"جير بوكس غسالة يونيون اير 6 خرم",price:"0",image:"washers/uionion_6.png",specs:["الماركة : DIESEL"]},
           ]
+        },
+
+
+
+        {
+            name:"لوحة تحكم (كارتة)",
+            products:[
+                {name:"كارتة غسالة سامسونج",price:"0",image:"washers/samsung.png",specs:[' ']},
+                {name:"كارتة غسالة توشيبا 8 كيلو",price:"0",image:"washers/toshiba_arabi.png",specs:['الماركة : ALARABI']},
+                {name:"كارتة غسالة يونيفيرسال 1 شاشة",price:"0",image:"washers/1screen.png",specs:['الماركة : SADEK']},
+                {name:"كارتة غسالة يونيفيرسال تاتش",price:"0",image:"washers/universal_touch.png",specs:[" "]},
+            ]
         },
 
 

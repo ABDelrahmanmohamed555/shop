@@ -412,3 +412,128 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("✅ تم تفعيل زر القائمة بنجاح!");
     
 });
+
+
+
+
+
+
+// ====== Easter Egg: Franchise Eyes ======
+const secretEye = document.getElementById("secretEye");
+const allIris = document.querySelectorAll(".iris");
+const SECRET_WORD = "eye";
+let eyeActive = false;
+
+searchInput.addEventListener("input", () => {
+    const val = searchInput.value.trim().toLowerCase();
+    if (val === SECRET_WORD && !eyeActive) {
+        eyeActive = true;
+        secretEye.classList.add("active");
+        searchInput.value = "";
+    }
+});
+
+// Mouse tracking
+document.addEventListener("mousemove", (e) => {
+    if (!eyeActive) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 8;
+    allIris.forEach(iris => {
+        iris.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+    });
+});
+
+// Flicker on outerGlow
+let flickerInterval = null;
+function startFlicker() {
+    flickerInterval = setInterval(() => {
+        if (!eyeActive) return;
+        document.querySelectorAll(".outerGlow").forEach(glow => {
+            glow.style.opacity = 0.7 + Math.random() * 0.4;
+            glow.style.filter = `blur(${35 + Math.random() * 20}px)`;
+        });
+    }, 80);
+}
+
+// IrisGlow scale
+let irisGlowInterval = null;
+function startIrisGlow() {
+    irisGlowInterval = setInterval(() => {
+        if (!eyeActive) return;
+        document.querySelectorAll(".irisGlow").forEach(glow => {
+            glow.style.transform = `translate(-50%, -50%) scale(${1 + Math.random() * 0.08})`;
+        });
+    }, 120);
+}
+
+// Mist random movement
+let mistInterval = null;
+function startMist() {
+    mistInterval = setInterval(() => {
+        if (!eyeActive) return;
+        document.querySelectorAll(".mist").forEach(m => {
+            let x = (Math.random() - 0.5) * 20;
+            let y = (Math.random() - 0.5) * 20;
+            m.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }, 400);
+}
+
+// Pulse with requestAnimationFrame
+let pulseFrame = null;
+let t = 0;
+function animatePulse() {
+    if (!eyeActive) return;
+    t += 0.02;
+    allIris.forEach(i => {
+        i.style.scale = 1 + Math.sin(t) * 0.015;
+    });
+    pulseFrame = requestAnimationFrame(animatePulse);
+}
+
+// Open
+function openEyeEasterEgg() {
+    eyeActive = true;
+    secretEye.classList.add("active");
+    startFlicker();
+    startIrisGlow();
+    startMist();
+    animatePulse();
+}
+
+// Close
+function closeEyeEasterEgg() {
+    eyeActive = false;
+    secretEye.classList.remove("active");
+    allIris.forEach(iris => {
+        iris.style.transform = "";
+        iris.style.scale = "";
+    });
+    document.querySelectorAll(".outerGlow").forEach(g => {
+        g.style.opacity = "";
+        g.style.filter = "";
+    });
+    document.querySelectorAll(".irisGlow").forEach(g => {
+        g.style.transform = "";
+    });
+    document.querySelectorAll(".mist").forEach(m => {
+        m.style.transform = "";
+    });
+    clearInterval(flickerInterval);
+    clearInterval(irisGlowInterval);
+    clearInterval(mistInterval);
+    cancelAnimationFrame(pulseFrame);
+}
+
+// Trigger
+searchInput.addEventListener("input", () => {
+    const val = searchInput.value.trim().toLowerCase();
+    if (val === SECRET_WORD && !eyeActive) {
+        openEyeEasterEgg();
+        searchInput.value = "";
+    }
+});
+
+secretEye.addEventListener("click", () => {
+    closeEyeEasterEgg();
+});
