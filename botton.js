@@ -443,6 +443,18 @@ document.addEventListener("mousemove", (e) => {
     });
 });
 
+
+// Touch tracking
+document.addEventListener("touchmove", (e) => {
+    if (!eyeActive) return;
+    const touch = e.touches[0];
+    const x = (touch.clientX / window.innerWidth - 0.5) * 12;
+    const y = (touch.clientY / window.innerHeight - 0.5) * 8;
+    allIris.forEach(iris => {
+        iris.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+    });
+}, { passive: true });
+
 // Flicker on outerGlow
 let flickerInterval = null;
 function startFlicker() {
