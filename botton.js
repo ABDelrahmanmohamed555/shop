@@ -191,24 +191,51 @@ function getAllProducts(categories) {
 }
 
 // ====== عرض المنتجات ======
+const PRODUCTS_PER_PAGE = 50;
+const PRODUCTS_INCREMENT = 25;
+let currentProducts = [];
+let displayedCount = 0;
+let loadMoreBtn = null;
+
 function renderProducts(products, titleText) {
     productsContainer.innerHTML = "";
+    currentProducts = products || [];
+    displayedCount = 0;
 
     if (filterTitle) {
         filterTitle.textContent = titleText || "";
         filterTitle.style.display = titleText ? "block" : "none";
     }
 
-    if (!products || products.length === 0) {
+    if (loadMoreBtn) loadMoreBtn.remove();
+    loadMoreBtn = null;
+
+    if (!currentProducts || currentProducts.length === 0) {
         productsContainer.innerHTML = `<p class="empty-note" style="padding:20px;">لا توجد منتجات هنا حاليًا</p>`;
         return;
     }
 
-    products.forEach(product => {
-        productsContainer.appendChild(createProductCard(product));
-    });
+    loadNextProducts();
 }
 
+function loadNextProducts() {
+    const batchSize = displayedCount === 0 ? PRODUCTS_PER_PAGE : PRODUCTS_INCREMENT;
+    const end = Math.min(displayedCount + batchSize, currentProducts.length);
+    for (let i = displayedCount; i < end; i++) {
+        productsContainer.appendChild(createProductCard(currentProducts[i]));
+    }
+    displayedCount = end;
+
+    if (loadMoreBtn) loadMoreBtn.remove();
+
+    if (displayedCount < currentProducts.length) {
+        loadMoreBtn = document.createElement("button");
+        loadMoreBtn.className = "load-more-btn";
+        loadMoreBtn.textContent = `عرض المزيد (${displayedCount} / ${currentProducts.length})`;
+        loadMoreBtn.addEventListener("click", loadNextProducts);
+        productsContainer.appendChild(loadMoreBtn);
+    }
+}
 // ====== إنشاء كارت المنتج ======
 function createProductCard(product) {
     const card = document.createElement("div");

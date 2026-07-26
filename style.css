@@ -1394,3 +1394,24 @@ body { overflow-x: hidden; max-width: 100vw; }
 .cat-overlay.active img {
     transform: scale(1);
 }
+
+
+
+/* ====== LOAD MORE BUTTON ====== */
+.load-more-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 40px;
+    background: linear-gradient(135deg, #FFD700, #FFA000);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.load-more-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
