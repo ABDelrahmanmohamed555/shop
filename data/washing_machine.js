@@ -36,6 +36,15 @@ const washing_machine = {
                 {name:"كارتة غسالة توشيبا 8 كيلو",price:"0",image:"washers/toshiba_arabi.png",specs:['الماركة : ALARABI']},
                 {name:"كارتة غسالة يونيفيرسال 1 شاشة",price:"0",image:"washers/1screen.png",specs:['الماركة : SADEK']},
                 {name:"كارتة غسالة يونيفيرسال تاتش",price:"0",image:"washers/universal_touch.png",specs:[" "]},
+                {name:"كارتة غسالة يونيفيرسال 3 شاشة",price:"0",image:"washers/3screen.png",specs:[" "]},
+            ]
+        },
+
+
+        {
+            name:"حساسات",
+            products:[
+                {name:"LG حساس ماتور غسالة",price:"0",image:"washers/LG_sensor.png",specs:[" "]}
             ]
         },
 
@@ -53,7 +62,7 @@ const washing_machine = {
         {
             name:"ماتور",
             products :[
-                
+                {name:"ماتور عصر غسالة حوضين",price:"0",image:"washers/spin_motor.png",specs:["الماركة : AL-ABOUDY","القوة : 90 واط"]},
             ]
         },
         

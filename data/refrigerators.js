@@ -77,12 +77,18 @@ const refrigerators = {
         },
         {
             name : "شبك (سربنتينة)" ,
-            products :[]
+            products :[
+                {name:"شبكة ثلاجة 10 قدم",price:"0",image:"refs/10F.png",specs:[" "]},
+                {name:"شبكة ثلاجة 12 قدم",price:"0",image:"refs/12F.png",specs:[" "]},
+                {name:"شبكة ثلاجة 14 قدم",price:"0",image:"refs/14F.png",specs:[" "]},
+                {name:"شبكة ثلاجة 16 قدم",price:"0",image:"refs/16F.png",specs:[" "]},
+            ]
         },
         {
             name : "فريون" ,
             products : [
-                {name :"فريون 404",price:"0",image:"refs/ferion_404.png",specs:["الحجم : 2.5 كيلو"]}
+                {name :"فريون 404",price:"0",image:"refs/ferion_404.png",specs:["الحجم : 2.5 كيلو"]},
+                {name :"فريون 600",price:"0",image:"refs/R600.png",specs:["الحجم : 100 جرام"]},
             ]
         },
         
@@ -113,6 +119,7 @@ const refrigerators = {
                 {name : "كارتة ثلاجة شارب",price :"0",image:"refs/sharp_board.png",specs:["الماركة : العربي","الكود : RF-SH-MAINBORD-58A0"]},
                 {name : "كارتة ثلاجة هيتاشي",price :"0",image:"refs/hitachi_board.png",specs:["الماركة : HITACHI","الكود : PTR-VG710P3 050"]},
                 {name : "كارتة ديب فريزر كريازي شاشة كبيرة",price :"0",image:"refs/deep_freezer_board.png",specs:["الماركة : EIVEL"]},
+                {name : "كارتة ثلاجة يونيون اير",price :"0",image:"refs/uionion_air_board.png",specs:["الماركة : TOMTHON"]},
             ]
         },
         {
@@ -144,6 +151,7 @@ const refrigerators = {
                 {name :"ثوزان مواسير",price :"10",image :"refs/thaosan.png",specs :["منظف مواسير ثلاجة"]},
                 {name :"لمبة ثلاجة",price :"0",image :"refs/main_lamb.png",specs :["الماركة :AL-REDA","متوافقة مع معظم انواع الثلاجات"]},
                 {name :"درج مياه ماتور",price :"0",image :"refs/cover.png",specs :["حماية الماتور من المياه"]},
+                {name :"زيت ماتور ثلاجة متعدد",price :"0",image :"refs/motor_oil.png",specs :["متوافق مع فريون : 134,22,11,290,600,404,408,415,507",",12,410,123,502,407,406,23,508"]},
             ]
         },
 
