@@ -74,6 +74,7 @@ const washing_machine = {
                 {name:"خرطوم صرف ",price:"0",image:"washers/elsakia.png",specs:[" "]},
                 {name:"خرطوم سحب",price:"0",image:"washers/vacuum_.png",specs:[" "]},
                 {name:"كاوتش غسالة حوضين",price:"0",image:"washers/sadek_ruber.png",specs:["الماركة : SADEK"]},
+                {name:"فلتر غسالة حوضين",price:"0",image:"washers/tishiba_filter.png",specs:["متوافق مع غسالة توشيبا 8 كيلو"]},
             ]
         }
 
