@@ -77,6 +77,7 @@ const washing_machine = {
                 {name:"فلتر غسالة حوضين",price:"0",image:"washers/tishiba_filter.png",specs:["متوافق مع غسالة توشيبا 8 كيلو"]},
                 {name:"شربون ماتور غسالة",price:"0",image:"washers/carbon.png",specs:["متوافق مع غسالات الاوتوماتيك"]},
                 {name:"مفصلة باب ايديال ايليت",price:"0",image:"washers/elite_door.png",specs:[" "]},
+                {name:"مفتاح امان باب سغالة",price:"0",image:"washers/lock_door.png",specs:["اوتوماتيك"]},
             ]
         }
 
