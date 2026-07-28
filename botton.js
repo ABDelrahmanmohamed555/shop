@@ -195,12 +195,14 @@ const PRODUCTS_PER_PAGE = 50;
 const PRODUCTS_INCREMENT = 25;
 let currentProducts = [];
 let displayedCount = 0;
+
 let loadMoreBtn = null;
 
 function renderProducts(products, titleText) {
     productsContainer.innerHTML = "";
     currentProducts = products || [];
     displayedCount = 0;
+    if (!titleText) shuffleArray(currentProducts);
 
     if (filterTitle) {
         filterTitle.textContent = titleText || "";
@@ -339,7 +341,14 @@ document.addEventListener("keydown", (e) => {
  
 
 
-
+// ====== Shuffle ======
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
 
 
 
