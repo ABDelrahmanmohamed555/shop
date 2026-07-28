@@ -75,9 +75,13 @@ const washing_machine = {
                 {name:"خرطوم سحب",price:"0",image:"washers/vacuum_.png",specs:[" "]},
                 {name:"كاوتش غسالة حوضين",price:"0",image:"washers/sadek_ruber.png",specs:["الماركة : SADEK"]},
                 {name:"فلتر غسالة حوضين",price:"0",image:"washers/tishiba_filter.png",specs:["متوافق مع غسالة توشيبا 8 كيلو"]},
+                {name:"شربون ماتور غسالة",price:"0",image:"washers/carbon.png",specs:["متوافق مع غسالات الاوتوماتيك"]},
+                {name:"مفصلة باب ايديال ايليت",price:"0",image:"washers/elite_door.png",specs:[" "]},
             ]
         }
 
     ]
 
 }
+
+// مبضون مبضون مبضون مبضون مبضون مبضون مبضون 
