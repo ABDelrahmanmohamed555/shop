@@ -27,6 +27,14 @@ const washing_machine = {
           ]
         },
 
+        {
+            name:"تايمر",
+            products :[
+                {name:"تايمر غسالة اوتوماتيك",price:"0",image:"washers/timer_elite.png",specs:["متوافق مع غسالة ايديال ايليت"]},
+                {name:"تايمر كامة توشيبا",price:"0",image:"washers/timer_drain.png",specs:["الماركة : DIESEL","الكود : DS-PC.3"]},
+            ]
+        },
+
 
 
         {
@@ -63,6 +71,8 @@ const washing_machine = {
             name:"ماتور",
             products :[
                 {name:"ماتور عصر غسالة حوضين",price:"0",image:"washers/spin_motor.png",specs:["الماركة : AL-ABOUDY","القوة : 90 واط"]},
+                {name:"ماتور عصر غسالة توشيبا",price:"0",image:"washers/fast_motor.png",specs:["الماركة : FAST FORWARD","متوافق مع غسالات هاف 10-12 كيلو "]},
+                {name:"ماتور عصر غسالة حوضين فريش",price:"0",image:"washers/60w_motor.png",specs:["القوة : 60 واط"]},
             ]
         },
         
@@ -75,9 +85,16 @@ const washing_machine = {
                 {name:"خرطوم سحب",price:"0",image:"washers/vacuum_.png",specs:[" "]},
                 {name:"كاوتش غسالة حوضين",price:"0",image:"washers/sadek_ruber.png",specs:["الماركة : SADEK"]},
                 {name:"فلتر غسالة حوضين",price:"0",image:"washers/tishiba_filter.png",specs:["متوافق مع غسالة توشيبا 8 كيلو"]},
-                {name:"شربون ماتور غسالة",price:"0",image:"washers/carbon.png",specs:["متوافق مع غسالات الاوتوماتيك"]},
+                {name:"شربون ماتور غسالة",price:"0",image:"washers/carbon.png",specs:["الماركة : APC","متوافق مع غسالات الاوتوماتيك"]},
                 {name:"مفصلة باب ايديال ايليت",price:"0",image:"washers/elite_door.png",specs:[" "]},
                 {name:"مفتاح امان باب سغالة",price:"0",image:"washers/lock_door.png",specs:["اوتوماتيك"]},
+                {name:"صمام سحب غسالة فوق اوتوماتيك",price:"0",image:"washers/withdraw.png",specs:["الماركة : العبد"]},
+                {name:"مسطرة الغاء زانوسي",price:"0",image:"washers/B2_ZMC.png",specs:["الكود : B2"]},
+                {name:"صمام سحب زاوية",price:"0",image:"washers/corner_withdraw.png",specs:[" "]},
+                {name:"شداد فرامل توشيبا",price:"0",image:"washers/break_toshiba.png",specs:[" "]},
+                {name:"طقم صرف يونيفرسال فوق اوتوماتيك",price:"0",image:"washers/universal_drain.png",specs:[" "]},
+                {name:"فلتر غسالة زانوسي",price:"0",image:"washers/zmc_filter.png",specs:["الماركة : FUTURE"]},
+                {name:"صمام سحب مفرد",price:"0",image:"washers/tube_1.png",specs:["الكود : 153/004"]},
             ]
         }
 

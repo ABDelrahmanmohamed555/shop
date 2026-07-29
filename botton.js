@@ -198,6 +198,8 @@ let displayedCount = 0;
 
 let loadMoreBtn = null;
 
+
+
 function renderProducts(products, titleText) {
     productsContainer.innerHTML = "";
     currentProducts = products || [];

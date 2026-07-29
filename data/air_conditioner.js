@@ -17,6 +17,14 @@ const air_conditioner = {
             products:[
                 {name:"كونتاكتور تكييف",price:"0",image:"air_conditioner/contactor_.png",specs:[" الماركة : GLOBAL"]},
             ]
+        },
+
+        {
+            name:"لوحة تحكم (كارتة)",
+            products:[
+                {name:"كارتة تكييف متعدد",price:'0',image:"air_conditioner/tomthon_system.png",specs:["الماركة : TOMTHON","الكود : QY-U02B"]},
+                {name:"كارتة تكييف متعدد",price:'0',image:"air_conditioner/universal_system_n.png",specs:["الكود : QD-U08A"]},
+            ]
         }
 
     ]

@@ -929,10 +929,9 @@ body { overflow-x: hidden; max-width: 100vw; }
 /* [CHANGED] blur على عنصر ثابت مش متحرك (تحسين أداء) */
 .expand-layer::after {
     content: '';
-    position: fixed;
+    position: absolute;
     inset: 0;
-    background: rgba(8, 10, 16, 0.5);
-    backdrop-filter: blur(var(--blur-main, 30px));
+    background: rgba(6, 8, 14, 0.85);
     z-index: -2;
     pointer-events: none;
 }
@@ -1414,4 +1413,48 @@ body { overflow-x: hidden; max-width: 100vw; }
 .load-more-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+
+/* ====== SLIDER ARROWS ====== */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.expand-layer.active .slider-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+.slider-arrow:hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #FFD700;
+    transform: scale(1.1);
+}
+.prev-arrow {
+    left: 15px;
+    transform: translateY(-50%);
+}
+.prev-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+.next-arrow {
+    right: 15px;
+    transform: translateY(-50%);
+}
+.next-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
 }

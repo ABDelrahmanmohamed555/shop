@@ -381,3 +381,8 @@ buildHorizontalSlider();
 
 document.querySelector('.bg-layer-a').style.backgroundImage = `url(${allCategories[0].image})`;
 document.querySelector('.bg-layer-a').classList.add('active');
+
+
+
+document.getElementById("prevArrow").addEventListener("click", previousCategory);
+document.getElementById("nextArrow").addEventListener("click", nextCategory);
