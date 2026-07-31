@@ -12,12 +12,7 @@ const air_conditioner = {
             
         },
 
-        {
-            name:"اخرى",
-            products:[
-                {name:"كونتاكتور تكييف",price:"0",image:"air_conditioner/contactor_.png",specs:[" الماركة : GLOBAL"]},
-            ]
-        },
+
 
         {
             name:"لوحة تحكم (كارتة)",
@@ -25,8 +20,24 @@ const air_conditioner = {
                 {name:"كارتة تكييف متعدد",price:'0',image:"air_conditioner/tomthon_system.png",specs:["الماركة : TOMTHON","الكود : QY-U02B"]},
                 {name:"كارتة تكييف متعدد",price:'0',image:"air_conditioner/universal_system_n.png",specs:["الكود : QD-U08A"]},
             ]
-        }
+        },
 
+        {
+            name:"مواسير",
+            products:[
+                {name:"مواسير تكييف 1/2 + 1/4",price:"0",image:"air_conditioner/3m.png",specs:["الطول : 3 متر"]}
+            ]
+        },
+
+
+        {
+            name:"اخرى",
+            products:[
+                {name:"كونتاكتور تكييف",price:"0",image:"air_conditioner/contactor_.png",specs:[" الماركة : GLOBAL"]},
+            ]
+        },
+
+        
     ]
 
 

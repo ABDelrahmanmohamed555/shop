@@ -75,6 +75,17 @@ const washing_machine = {
                 {name:"ماتور عصر غسالة حوضين فريش",price:"0",image:"washers/60w_motor.png",specs:["القوة : 60 واط"]},
             ]
         },
+
+
+        {
+            name:"مروحة",
+            products:[
+                {name:"مروحة غسالة توشيبا 6 كيلو",price:"0",image:"washers/half_6k.png",specs:["متوافق مع غسالات هاف اوتوماتيك"]},
+                {name:"مروحة غسالة برميل",price:"0",image:"washers/small_fan.png",specs:[" "]},
+                {name:"مروحة غسالة يونيون اير 10 كيلو",price:"0",image:"washers/uionion_10k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"مروحة غسالة توشيبا 5 كيلو",price:"0",image:"washers/tishiba_5k.png",specs:["متوافق مع غسالات هاف اوتوماتيك"]},
+            ]
+        },
         
 
         {
@@ -95,6 +106,8 @@ const washing_machine = {
                 {name:"طقم صرف يونيفرسال فوق اوتوماتيك",price:"0",image:"washers/universal_drain.png",specs:[" "]},
                 {name:"فلتر غسالة زانوسي",price:"0",image:"washers/zmc_filter.png",specs:["الماركة : FUTURE"]},
                 {name:"صمام سحب مفرد",price:"0",image:"washers/tube_1.png",specs:["الكود : 153/004"]},
+                {name:"فريم باب غسالة زانوسي",price:"0",image:"washers/zmc_frame.png",specs:[" "]},
+                {name:"طمبورة ماتور غسالة",price:"0",image:"washers/tamboor.png",specs:["الكود : M2"]},
             ]
         }
 
