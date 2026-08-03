@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    console.log("✅ تم تفعيل زر القائمة بنجاح!");
+    console.log("✅ الدنيا تمام");
     
 });
 
