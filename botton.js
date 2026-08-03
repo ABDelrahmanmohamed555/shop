@@ -603,3 +603,31 @@ searchInput.addEventListener("input", () => {
 catOverlay.addEventListener("click", () => {
     catOverlay.classList.remove("active");
 });
+
+
+// ====== Video Easter Egg (with sound) ======
+const videoOverlay = document.getElementById("videoOverlay");
+const secretVideo = document.getElementById("secretVideo");
+const videoClose = document.getElementById("videoClose");
+
+searchInput.addEventListener("input", () => {
+    const val = searchInput.value.trim().toLowerCase();
+    if (val === "lil" && !videoOverlay.classList.contains("active")) {
+        videoOverlay.classList.add("active");
+        secretVideo.currentTime = 0;
+        secretVideo.play().catch(() => {});
+        searchInput.value = "";
+    }
+});
+
+function closeVideo() {
+    secretVideo.pause();
+    secretVideo.currentTime = 0;
+    videoOverlay.classList.remove("active");
+}
+
+videoClose.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeVideo();
+});
+videoOverlay.addEventListener("click", closeVideo);

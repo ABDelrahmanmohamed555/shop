@@ -84,6 +84,11 @@ const washing_machine = {
                 {name:"مروحة غسالة برميل",price:"0",image:"washers/small_fan.png",specs:[" "]},
                 {name:"مروحة غسالة يونيون اير 10 كيلو",price:"0",image:"washers/uionion_10k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
                 {name:"مروحة غسالة توشيبا 5 كيلو",price:"0",image:"washers/tishiba_5k.png",specs:["متوافق مع غسالات هاف اوتوماتيك"]},
+                {name:"مروحة غسالة توشيبا  8 كيلو",price:"0",image:"washers/toshiba_8k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"مروحة غسالة توشيبا 10 كيلو",price:"0",image:"washers/toshiba_10k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"مروحة غسالة توشيبا 12 كيلو",price:"0",image:"washers/toshiba_12k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"مروحة غسالة يونفيرسال 10 كيلو",price:"0",image:"washers/universal_9k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"مروحة غسالة يونفيرسال 8 كيلو",price:"0",image:"washers/universal_8k.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
             ]
         },
         
@@ -102,12 +107,18 @@ const washing_machine = {
                 {name:"صمام سحب غسالة فوق اوتوماتيك",price:"0",image:"washers/withdraw.png",specs:["الماركة : العبد"]},
                 {name:"مسطرة الغاء زانوسي",price:"0",image:"washers/B2_ZMC.png",specs:["الكود : B2"]},
                 {name:"صمام سحب زاوية",price:"0",image:"washers/corner_withdraw.png",specs:[" "]},
-                {name:"شداد فرامل توشيبا",price:"0",image:"washers/break_toshiba.png",specs:[" "]},
+                {name:"شداد فرامل غسالة",price:"0",image:"washers/break_toshiba.png",specs:[" "]},
                 {name:"طقم صرف يونيفرسال فوق اوتوماتيك",price:"0",image:"washers/universal_drain.png",specs:[" "]},
                 {name:"فلتر غسالة زانوسي",price:"0",image:"washers/zmc_filter.png",specs:["الماركة : FUTURE"]},
                 {name:"صمام سحب مفرد",price:"0",image:"washers/tube_1.png",specs:["الكود : 153/004"]},
                 {name:"فريم باب غسالة زانوسي",price:"0",image:"washers/zmc_frame.png",specs:[" "]},
                 {name:"طمبورة ماتور غسالة",price:"0",image:"washers/tamboor.png",specs:["الكود : M2"]},
+                {name:"اكرة باب غسالة كريازي",price:"0",image:"washers/kiriazi_handle.png",specs:["متوافق مع غسالات اوتوماتيك"]},
+                {name:"صمام سحب ثلاثي",price:"0",image:"washers/third.png",specs:["متوافق مع غسالات فوق اوتوماتيك"]},
+                {name:"لسان غسالة اديال ايليت",price:"0",image:"washers/elite_tunge.png",specs:["متوافق مع غسالات اوتوماتيك"]},
+                {name:"لسان غسالة اكوا",price:"0",image:"washers/acua.png",specs:["متوافق مع غسالات اوتوماتيك"]},
+                {name:"اكرة باب غسالة زانوسي فيكتوريا",price:"0",image:"washers/victoria.png",specs:["متوافق مع غسالات اوتوماتيك"]},
+                {name:"جوان باب غسالة زانوسي",price:"0",image:"washers/jowan.png",specs:["الماركة : العبد","متوافق مع غسالات اوتوماتيك"]},
             ]
         }
 

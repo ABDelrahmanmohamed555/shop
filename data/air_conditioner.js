@@ -25,7 +25,11 @@ const air_conditioner = {
         {
             name:"مواسير",
             products:[
-                {name:"مواسير تكييف 1/2 + 1/4",price:"0",image:"air_conditioner/3m.png",specs:["الطول : 3 متر"]}
+                {name:"مواسير تكييف 1/2 + 1/4",price:"0",image:"air_conditioner/3m.png",specs:["الطول : 3 متر"]},
+                {name:"مواسير تكييف ربع 1/4",price:"0",image:"air_conditioner/1+4.png",specs:[" "]},
+                {name:"مواسير تكييف خمس اثمان 5/8",price:"0",image:"air_conditioner/5+8.png",specs:[" "]},
+                {name:"مواسير تكييف ثلاث اثمان 3/8",price:"0",image:"air_conditioner/3+8.png",specs:[" "]},
+                {name:"مواسير تكييف نصف 1/2",price:"0",image:"air_conditioner/1+2.png",specs:[" "]},
             ]
         },
 
