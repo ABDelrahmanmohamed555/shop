@@ -32,6 +32,7 @@ const washing_machine = {
             products :[
                 {name:"تايمر غسالة اوتوماتيك",price:"0",image:"washers/timer_elite.png",specs:["متوافق مع غسالة ايديال ايليت"]},
                 {name:"تايمر كامة توشيبا",price:"0",image:"washers/timer_drain.png",specs:["الماركة : DIESEL","الكود : DS-PC.3"]},
+                {name:"تايمر كامة توشيبا",price:"0",image:"washers/toshiba_cam.png",specs:["الماركة : العربي"]},
             ]
         },
 
