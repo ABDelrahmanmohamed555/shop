@@ -37,7 +37,7 @@ const items = {
         {
             name:"رولمان بلي",
             products:[
-                {name:"رولمان بلي مقاس 6206",price:"0",image:"gear/6206_korean.png",specs:["الماركة : KBC"]}
+                {name:"رولمان بلي كوري مقاس 6206",price:"0",image:"gear/6206_korean.png",specs:["الماركة : KBC"]}
             ]
         }
     ]
