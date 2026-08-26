@@ -17,6 +17,27 @@ const items = {
                 {name:"موبينة هيلتي كراون 1250 واط ماكس",price:"0",image:"gear/1250_max.png",specs:["الماركة : ARMATURE","الكود : AT/CHD1250 MAX"]},
                 {name:"موبينة هيلتي انكو 1800 واط",price:"0",image:"gear/incoo_1800.png",specs:["الماركة : INCGO"]},
                 {name:"موبينة صاروخ كراون 7 بوصة تلميع",price:"0",image:"gear/crown_clear_7.png",specs:["الماركة : ARMATURE"]},
+                {name:"موبينة صاروخ بوش 5بوصة",price:"0",image:"gear/bosch_5.png",specs:["الماركة : MAX"]},
+                {name:"موبينة صاروخ كراون 750 واط",price:"0",image:"gear/crown_750.png",specs:["الماركة : ARMATURE (PGQ)"]},
+                {name:"موبينة صاروخ بوش 9 بوصة",price:"0",image:"gear/bocsh_9.png",specs:["الماركة : MAX","الكود : GWS20-230"]},
+            ]
+        },
+
+
+        {
+            name:"شربون",
+            products :[
+                {name:"شربون صاروخ كراون 4 بوصة",price:"0",image:"gear/C_crown_4.png",specs:["الماركة : PGQ","الكود : CROWN 115"]},
+                {name:"شربون صاروخ بوش 9 بوصة",price:"0",image:"gear/bosch_9_C.png",specs:["الماركة : WG"]},
+            ]
+
+        },
+
+
+        {
+            name:"رولمان بلي",
+            products:[
+                {name:"رولمان بلي مقاس 6206",price:"0",image:"gear/6206_korean.png",specs:["الماركة : KBC"]}
             ]
         }
     ]
