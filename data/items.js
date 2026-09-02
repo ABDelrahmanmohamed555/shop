@@ -29,6 +29,7 @@ const items = {
             products :[
                 {name:"شربون صاروخ كراون 4 بوصة",price:"0",image:"gear/C_crown_4.png",specs:["الماركة : PGQ","الكود : CROWN 115"]},
                 {name:"شربون صاروخ بوش 9 بوصة",price:"0",image:"gear/bosch_9_C.png",specs:["الماركة : WG"]},
+                {name:"شربون صاروخ ماكيتا 9 بوصة",price:"0",image:"gear/makita_9_C.png",specs:["الماركة : WG"]},
             ]
 
         },
@@ -41,6 +42,7 @@ const items = {
                 {name:"رولمان بلي كوري مقاس 6203",price:"0",image:"gear/6203_korean.png",specs:["الماركة : KBC"]},
                 {name:"رولمان بلي صيني مقاس 6302",price:"0",image:"gear/6302_china.png",specs:["الماركة : SADEK"]},
                 {name:"رولمان بلي كوري مقاس 6204",price:"0",image:"gear/6204_korean.png",specs:["الماركة : KBC"]},
+                {name:"رولمان بلي كوري مقاس 6205",price:"0",image:"gear/6205_korean.png",specs:["الماركة : KBC"]},
             ]
         }
     ]
