@@ -20,8 +20,11 @@ const items = {
                 {name:"موبينة صاروخ بوش 5بوصة",price:"0",image:"gear/bosch_5.png",specs:["الماركة : MAX"]},
                 {name:"موبينة صاروخ كراون 750 واط",price:"0",image:"gear/crown_750.png",specs:["الماركة : ARMATURE (PGQ)"]},
                 {name:"موبينة صاروخ بوش 9 بوصة",price:"0",image:"gear/bocsh_9.png",specs:["الماركة : MAX","الكود : GWS20-230"]},
+                {name:"موبينة صاروخ كراون 700 واط",price:"0",image:"gear/crown_700w.png",specs:[" "]},
             ]
         },
+
+
 
 
         {
